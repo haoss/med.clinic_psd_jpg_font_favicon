@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+_gulp/node_modules
+bower_components
+_design
+*.node
+*.orig
