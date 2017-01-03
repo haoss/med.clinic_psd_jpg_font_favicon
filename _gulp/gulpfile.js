@@ -47,9 +47,6 @@ gulp.task('sprite-image', function () {
 gulp.task('sass', function() {
   gulp.src('./_sass/main.sass')
     .pipe(plumber())
-    .pipe(sass({
-  		includePaths: require('node-bourbon').includePaths
-  	}).on('error', sass.logError))
     .pipe(plugins.sourcemaps.init())
     .pipe(rename({suffix: '.min', prefix : ''}))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: true }))

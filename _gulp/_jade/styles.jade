@@ -1,0 +1,43 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Стили' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Стили' + ' - Клиника наркологии и психиатрии' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    //- include ./_include/_preloader
+    
+    div(style="height: 50px;")
+    
+    .content
+      .container
+        
+        h1 Заголовок h1 (24px Regular)
+        h2 Заголовок h2 (22px Regular)
+        h3 Заголовок h3 (20 px Regular)
+        h4 Заголовок h4 (18px Bold)
+        h5 Заголовок h5 (16px Bold)
+        h6 Заголовок h6 (14 px Bold)
+        
+        p p - Обычный текст (14px, Regular, 21 px line-height)
+        
+        ul.list
+          li Список ul/li (14px, 26 px line-height)
+          li Список ul/li (14px, 26 px line-height)
+          li Список ul/li (14px, 26 px line-height)
+          li Список ul/li (14px, 26 px line-height)
+          li Список ul/li (14px, 26 px line-height)
+        
+        ol.list
+          li Список ol/li (14px, Light, 26 px line-height)
+          li Список ol/li (14px, Light, 26 px line-height)
+          li Список ol/li (14px, Light, 26 px line-height)
+          li Список ol/li (14px, Light, 26 px line-height)
+          li Список ol/li (14px, Light, 26 px line-height)
+
+    div(style="height: 50px;")

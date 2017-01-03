@@ -26,7 +26,6 @@
     "gulp-uncss": "^1.0.6",
     "gulp.spritesmith": "^6.2.1",
     "merge-stream": "^1.0.1",
-    "node-bourbon": "^4.2.8",
     "vinyl-buffer": "^1.0.0"
   }
 }
