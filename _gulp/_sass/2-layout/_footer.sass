@@ -1,4 +1,125 @@
 /* footer */
 .footer
-  background-color: $color-gray
-  height: 100px
+  // background-color: $color-gray
+  // height: 100px
+  font-size: rem(12)
+
+  &__wrapper
+    background-color: $color-lightnes
+    padding-top: 25px
+    padding-bottom: 25px
+
+  &__copyright
+    background-color: $color-light
+    font-family: $font-roboto-medium
+    padding: 17.5px 0
+
+  &__title
+    font-size: rem(14)
+    font-family: $font-roboto-bold
+    margin-bottom: 10px
+
+  &__row
+    display: flex
+    &>div
+      padding-left: 50px
+      &:first-child
+        padding-left: 100px
+      &+div
+        border-left: 1px solid #dde0e1
+
+  &__menu
+    margin: 0
+    padding: 0
+    &>li
+      margin: 0
+      list-style: none
+      &:not(:last-child)
+        margin-bottom: 5px
+      &>a
+        text-decoration: none
+        color: $primary-color
+        position: relative
+        padding-left: 10px
+        display: block
+        &:hover
+          text-decoration: underline
+        &::before
+          content: "\f10a"
+          font-family: $font-ionicons
+          position: absolute
+          left: 0
+          top: 2px
+          color: #b3b3b3
+          font-size: rem(10)
+
+  &__top
+    border-top: 1px solid $color-light
+    padding-top: 20px
+    padding-bottom: 20px
+    &__row
+      display: flex
+      align-items: center
+
+      &>div
+        &+div
+          &::after
+            content: ''
+            position: absolute
+            width: 14px
+            height: 14px
+            border-radius: 50%
+            background-color: $color-gray
+            left: 0
+            top: 50%
+            transform: translate(-50%, -50%)
+
+  &__info
+    display: table
+    margin: 0 auto
+    font-size: rem(11)
+
+    &--call
+      width: 100%
+      max-width: 225px
+      text-align: center
+      .btn
+        display: block
+        margin-top: 5px
+
+    p
+      margin: 0
+      max-width: 160px
+    &>div
+      display: table-cell
+      vertical-align: middle
+      &+div
+        padding-left: 15px
+    .img
+      width: 54px
+      min-width: 54px
+      height: 54px
+      border-radius: 50%
+      overflow: hidden
+      text-align: center
+      background-color: $color-blue
+      color: $color-white
+      font-size: rem(32)
+      display: table-cell
+      vertical-align: middle
+      i
+        display: block
+        line-height: 1
+      .ion-iphone
+        font-size: rem(35)
+
+    &__title
+      font-size: rem(15)
+      font-family: $font-roboto-medium
+      margin-bottom: 3px
+
+.copyright
+  // height: 50px
+  // line-height: 50px
+  &--right
+    text-align: right

@@ -17,9 +17,6 @@ var gulp = require('gulp'),
   changed = require('gulp-changed'),
   cached = require('gulp-cached'),
   gulpif = require('gulp-if'),
-  minifycss = require('gulp-minify-css'),
-  uglify = require('gulp-uglifyjs'),
-  concat = require('gulp-concat'),
   filter = require('gulp-filter');
 
 var plugins = require("gulp-load-plugins")();
@@ -48,9 +45,17 @@ gulp.task('sass', function() {
   gulp.src('./_sass/main.sass')
     .pipe(plumber())
     .pipe(plugins.sourcemaps.init())
-    .pipe(rename({suffix: '.min', prefix : ''}))
-    .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: true }))
-    .pipe(minifycss())
+    .pipe(sass({
+        includePaths: ['./dist/css/'],
+        onError: browserSync.notify
+    }))
+    .pipe(autoprefixer({
+      browsers: ['last 10 versions'],
+      cascade: true
+    }))
+    // .pipe(uncss({
+    //    html: ['*.html']
+    // }))
     .pipe(plugins.sourcemaps.write("./"))
     .pipe(gulp.dest('./dist/css/'))
     .pipe(browserSync.reload({stream:true}));
@@ -70,19 +75,7 @@ gulp.task('jade', function() {
       pretty: '    '
     }))
     .pipe(gulp.dest('./dist/'))
-});
-
-gulp.task('scripts', function() {
-	return gulp.src([
-		'./dist/js/libs/modernizr/modernizr.js',
-		'./dist/js/libs/jquery/jquery-2.2.4.min.js',
-		'./dist/js/libs/jquery/jquery-migrate-1.4.1.min.js',
-		'./dist/js/libs/plugins-scroll/plugins-scroll.js',
-		'./dist/js/libs/magnific-popup/jquery.magnific-popup.min.js'
-		])
-		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
-		.pipe(gulp.dest('./dist/js/'));
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('setWatch', function() {
@@ -105,14 +98,17 @@ gulp.task('browser-sync', function() {
   });
 });
 
+gulp.task('js', function(){
+  gulp.src('./dist/**/*.js')
+    .pipe(browserSync.reload({stream:true}))
+});
+
 gulp.task('watch', ['setWatch'], function () {
   gulp.watch('./_sass/**/*.sass', ['sass']);
   gulp.watch('./_jade/**/*.jade', ['jade']);
-  gulp.watch('./dist/libs/**/*.js', ['scripts']);
+  gulp.watch('./dist/**/*.js', ['js']);
   gulp.watch('./img/img-sprite/*.png', ['sprite-image']);
   gulp.watch('./img/svg-sprite/*.svg', ['sprite-svg']);
-  gulp.watch('./dist/js/*.js').on("change", browserSync.reload);
-	gulp.watch('./dist/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync','watch']);

@@ -1,15 +1,38 @@
 // Header
 header.header
-  .container
-    
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+  
+  .header__top
+    .container
+      
+      .row
+        .col-sm-6
+          
+          .header__top__left
+            div
+              .header__phone 
+                small Обратный звонок
+                div 8 (964) 
+                  strong 539-07-79
+            div
+              a(href="#!").btn.btn--blue запись на прием
+          
+        .col-sm-6
+          
+          .header__top__right
+            nav(role="navigation")
+              ul
+                li: a(href="#!") Цена на услуги
+                li: a(href="#!") Контакты
+      
+  .header__bottom
+    .container
+      
+      .row
+        .col-sm-6
+          .header__bottom__block
+            span.hidden-xs График работы: 
+            b ВЫЕЗД НА ДОМ КРУГЛОСУТОЧНО И АНОНИМНО
+        .col-sm-6 
+          .header__bottom__block.header__bottom__block--right
+            span.hidden-xs Амбулаторный прием: 
+            b ПН-ВС 7д/24ч

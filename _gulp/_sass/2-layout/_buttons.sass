@@ -2,9 +2,9 @@
 
 .btn
   display: inline-block
-  padding: 6px 12px
+  padding: 0 25px
   margin-bottom: 0
-  font-size: rem(14)
+  font-size: rem(12)
   font-weight: 400
   line-height: 1.42857143
   text-align: center
@@ -17,12 +17,45 @@
     image: none
     color: $color-gray
   border: 1px solid transparent
-  border-radius: 4px
+  border-radius: 35px
+  text-decoration: none
+  text-transform: uppercase
+  height: 30px
+  line-height: 27px
+  font-family: $font-roboto-bold
 
   &:hover, &:focus, &:active
     outline: none
+    color: inherit
 
   &--default
     color: #333
     background-color: $color-white
     border-color: $color-gray
+    &:hover
+      background-color: $color-gray
+      color: $primary-color
+
+  &--blue
+    border-color: $color-blue
+    background-color: $color-blue
+    color: $color-white
+    &:hover
+      background-color: $color-white
+      color: $color-blue
+
+  &--red
+    border-color: $color-red
+    background-color: $color-red
+    color: $color-white
+    &:hover
+      background-color: $color-white
+      color: $color-red
+
+  &--white
+    border-color: $color-white
+    background-color: $color-white
+    color: $color-dark
+    &:hover
+      background-color: $color-blue
+      color: $color-white

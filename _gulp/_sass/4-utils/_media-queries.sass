@@ -1,48 +1,100 @@
 /*==========  Desktop First Method  ==========*/
 
-/* 1920 */
-@media only screen and (min-width : 1919px)
-  /**/
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1439px)
-  /**/
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .footer
+    &__row
+      &>div
+        &:first-child
+          padding-left: 80px
+        padding-left: 35px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .footer
+    &__row
+      &>div
+        &:first-child
+          padding-left: 50px
+        padding-left: 25px
+
+    &__info
+      p
+        max-width: 120px
+      .img
+        min-width: 32px
+        width: 32px
+        height: 32px
+        font-size: rem(19)
+        i
+          height: 20px
+        .ion-iphone
+          font-size: rem(21)
+      &--call
+        max-width: 155px
+      &__title
+        font-size: rem(14)
+
+  .img
+    &-document, &--document
+      max-width: 245px
+
+  .content
+    padding-bottom: 30px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+  .footer
+    &__top
+      padding-top: 30px
+      padding-bottom: 30px
+      &__row
+        flex-wrap: wrap
+        &>div
+          &+div
+            &::after
+              display: none
+    &__info
+      &--call
+        padding-top: 20px
+        max-width: 305px
 
-  /*Disable Animation on Mobile Devices*/
-  .animated
-    /*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
+  .img
+    &-document, &--document
+      max-width: 100%
+      float: none
+      padding-left: 0
+
+  p
+    margin-bottom: 20px
+
+  .content
+    padding-bottom: 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  .col-xxs-12
+    width: 100% !important
+
+  .copyright
+    text-align: center
+    line-height: 25px
+
+  .footer
+    &__copyright
+      padding-top: 10px
+      padding-bottom: 10px
+    &__info
+      width: 200px
+      padding-bottom: 25px
+      &>div
+        &:first-child
+          width: 1px
+      &--call
+        padding-top: 0
+        padding-bottom: 0
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

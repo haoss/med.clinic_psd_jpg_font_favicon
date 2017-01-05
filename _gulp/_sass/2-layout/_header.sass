@@ -1,8 +1,48 @@
 /* header */
 .header
-  background-color: $color-gray
-  height: 100px
+  // background-color: $color-gray
+  // height: 100px
 
-  ul
-    li
-      display: inline
+  &__top
+    background-color: $color-light
+    padding-top: 15px
+    padding-bottom: 15px
+
+    &__left
+      display: table
+      &>div
+        display: table-cell
+        vertical-align: middle
+        &+div
+          padding-left: 45px
+
+    &__right
+      float: right
+      nav
+        font-size: rem(14)
+        font-family: $font-roboto-bold
+        li
+          float: left
+          a
+            text-decoration: none
+            text-transform: uppercase
+            color: $primary-color
+
+  &__bottom
+    background-color: $color-lightnes
+    font-size: rem(11)
+    color: #6b6b6b
+    padding: 7px 0
+    &__block
+      b
+        color: $color-red
+      &--right
+        text-align: right
+
+  &__phone
+    font-size: rem(16)
+    small
+      font-size: rem(11)
+      color: #636363
+      line-height: 1
+      display: block
