@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // Document ready
 $(document).ready(function(){
@@ -10,28 +10,10 @@ $(document).ready(function(){
     });
   };
 
-  // E-mail Ajax Send
-  // Documentation & Example: https://github.com/agragregra/uniMail
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
   // Magnific popup gallery
   $('.gallery').each(function() {
     $(this).magnificPopup({
-      delegate: '.gallery-item',
+      delegate: '.gallery__item',
       type: 'image',
       gallery:{
         enabled:true
@@ -54,6 +36,12 @@ $(document).ready(function(){
     });
   });
 
+  $('.open-popup-link').magnificPopup({
+    type:'inline',
+    showCloseBtn: false,
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });
+
   // Magnific popup one image
   $('.image-popup').magnificPopup({
     type: 'image',
@@ -62,6 +50,9 @@ $(document).ready(function(){
     image: {
     	verticalFit: true
     }
+  });
+  $('.popup__close').on('click', function(){
+    $(this).magnificPopup('close')
   });
 
   // Magnific popup video
@@ -80,18 +71,65 @@ $(document).ready(function(){
     if($("html").hasClass("chrome")) {
         $.smoothScroll();
     }
-  } catch(err) {
+  } catch(err) { };
 
-  };
+  // Header navigation
+  $('.header__menu__button').on('click', function(){
+    $(this).parent().toggleClass('is-open');
+  });
+
+  // Catalog navigation
+  function menuCatalog(){
+    var li = $('.catalog__navigation .li--level1');
+    li.find('> *').on('click', function(e){
+      e.preventDefault();
+      li.removeClass('is-active');
+      $(this).parent().toggleClass('is-active');
+    });
+  }
+  menuCatalog();
+
+  // Carousel
+  $('.documents__carousel').owlCarousel({
+    items: 4,
+    nav: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 2
+      },
+      480: {
+        items: 3
+      },
+      970: {
+        items: 4
+      }
+    }
+  });
+
+  $('.doctors__carousel').owlCarousel({
+    items: 4,
+    margin: 30,
+    nav: true,
+    dots: false,
+    autoWidth: true,
+    loop: true
+  });
+
+  $('.carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    dots: true
+  })
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');
 });
 
-$(window).on('load', function() {
-  // $(".loader_inner").fadeOut();
-  $(".loader").delay(400).fadeOut("slow");
-});
+// $(window).on('load', function() {
+//   $(".loader").delay(400).fadeOut("slow");
+// });
 
 /*
 version 2015-09-23 14:30 GMT +2

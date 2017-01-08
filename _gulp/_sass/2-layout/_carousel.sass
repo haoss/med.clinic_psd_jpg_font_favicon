@@ -5,3 +5,149 @@
     padding: 0
   li
     list-style: none
+
+.owl
+  &-controls
+    position: absolute
+    top: -53px
+    width: 100%
+    // right: 0
+
+  &-prev, &-next
+    overflow: hidden
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    border: 1px solid $color-blue
+    font-size: rem(0)
+    background-color: $color-white
+    color: $color-blue
+    position: absolute
+    z-index: 10
+    right: 28px
+    top: 0
+    &:hover
+      background-color: $color-blue
+      color: $color-white
+    &::before
+      content: '\f3cf'
+      font-size: rem(16)
+      font-family: $font-ionicons
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
+  &-next
+    right: 0px
+    &::before
+      content: '\f3d1'
+
+  &-dots
+    width: 100%
+    text-align: center
+    position: absolute
+    margin-top: 20px
+    z-index: 5
+    .owl-dot
+      display: inline-block
+      padding: 0 3px
+      vertical-align: middle
+      span
+        height: 13px
+        display: block
+        width: 13px
+        border-radius: 50%
+        background-color: $color-white
+        transition: all 0.3s
+      &:hover
+        span
+          background-color: $color-blue
+      &.active
+        span
+          border: 3px solid $color-blue
+
+.documents
+  margin-bottom: 50px
+
+  &__carousel
+    // overflow: hidden
+    position: relative
+
+  &__block
+    text-align: center
+    font-size: rem(11)
+    position: relative
+    padding: 0 15px
+    max-width: 213px
+    img
+      margin: 0 auto 10px
+      display: block
+
+.doctors
+  &__block
+    font-size: rem(12)
+    width: 190px
+    .img
+      overflow: hidden
+      border-radius: 3px
+      margin-bottom: 15px
+    &__title
+      font-size: rem(14)
+      color: $color-blue
+      text-transform: uppercase
+      font-family: $font-roboto-bold
+      small
+        display: block
+        color: $primary-color
+        font-size: rem(12)
+        text-transform: none
+    hr
+      margin-bottom: 10px
+      margin-top: 13px
+    p
+      margin: 0
+
+    a[href*="mailto:"]
+      text-decoration: none
+
+    &__contacts
+      position: relative
+      padding-left: 20px
+      i
+        position: absolute
+        color: #9f9f9f
+        font-size: rem(12)
+        left: 0
+        top: 0
+
+.carousel
+  margin-bottom: 20px
+  position: relative
+  overflow: hidden
+  border-radius: 3px
+  .owl
+    &-controls
+      bottom: 60px
+      top: inherit
+    &-prev, &-next
+      // box-shadow: 0 0 0 8px $color-white
+      opacity: 1
+      transition: opacity 0.3s
+      height: 40px
+      width: 40px
+      border-width: 8px
+      border-color: $color-white
+      box-shadow: 0 0 0 1px $color-blue inset
+      &:hover
+        opacity: 0.5
+        background-color: $color-white
+        color: $color-blue
+    &-prev
+      left: 25px
+      right: inherit
+    &-next
+      right: 25px
+  &__block
+    img
+      border-radius: 3px

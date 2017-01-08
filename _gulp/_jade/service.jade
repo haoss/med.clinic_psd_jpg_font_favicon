@@ -1,0 +1,101 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Список услуг' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 услуга' + ' - Клиника наркологии и психиатрии' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content
+      .container
+        
+        .row
+          .col-sm-3
+            include ./_include/_left
+            
+          .col-sm-9
+            h1 Вывод из запоя
+            
+            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.  
+            p
+              img(src="./tmp/img-article.jpg", alt="").img-responsive.img-thumbnail
+            p По дороге встретил текст рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь. Вскоре ему повстречался коварный составитель рекламных текстов, напоивший его языком и речью и заманивший в свое агенство, которое использовало его снова и снова в своих проектах. И если его не переписали, то живет он там до сих пор.
+            
+            // Programm block
+            .programm
+              .programm__body
+                .programm__body__row
+                  i.ion-android-bookmark
+                  p.programm__row__title Программа: 
+                    strong Экспресс стоп алкоголь
+                .programm__body__row
+                  i.ion-clock
+                  p Период реабилитации: 
+                    strong 3-14 дней (Сокращенный курс лечения алкоголизма)
+                .programm__body__row
+                  i.ion-android-clipboard
+                  p 
+                    strong В программу входит:
+                  ol
+                    li Снятие физической зависимости (прерывание запоя) – программа детоксикации организма.
+                    li Нормализация сна.
+                    li Нормализация сердечно-сосудистой системы, желудочно-кишечного тракта, комплекс витаминов для мозга, а так же нервной системы и печеночный комплекс.
+                    li Пошаговые рекомендации профессиональных врачей и психологов.
+                    li Мотивационная психотерапия.
+                    li Рациональная психотерапия.
+                    li В случаи необходимости, по завершению терапии, применение алко-блокатора в соответствии с данными рекомендациями и в согласовании с пациентом (оплачивается отдельно).
+                
+              .programm__bottom
+                .programm__bottom__wrapper
+                  div 
+                    i.ion-ios-pricetags
+                    | Цена пакета: 
+                    strong от 1200 руб в сутки
+                  div
+                    a(href="#!").btn.btn--white.btn--programm Заказать услугу
+            
+            // help you family
+            .help-family
+              img(src="./img/help-family.png", alt="")
+              
+              .help-family__title Помогите 
+                br
+                | своим близким!
+              .help-family__body
+                div 
+                  strong +7 (987) 654-43-10
+                div
+                  em или
+                div
+                  a(href="#!").btn.btn--white вызвать врача
+              
+    
+    include ./_include/_footer
+    //- div(style="height: 500px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    
+    // Load Scripts
+    script.
+      var scr = {"scripts":[
+      {"src" : "./js/libs.js", "async" : false},
+      {"src" : "./js/common.js", "async" : false}
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+      
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom

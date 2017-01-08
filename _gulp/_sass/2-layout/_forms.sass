@@ -1,13 +1,13 @@
 /* forms */
 
 ::-webkit-input-placeholder
-  color: $color-gray
+  color: #9c9c9c
 ::-moz-placeholder
-  color: $color-gray
+  color: #9c9c9c
 :-ms-input-placeholder
-  color: $color-gray
+  color: #9c9c9c
 input:-moz-placeholder
-  color: $color-gray
+  color: #9c9c9c
 
 button, input, optgroup, select, textarea
   margin: 0
@@ -24,22 +24,45 @@ button, html input[type=button], input[type=reset], input[type=submit]
 
 .form
   &-group,  &__group
-    margin-bottom: 15px
+    margin-bottom: 10px
 
   &-control, &__control
     display: block
     width: 100%
-    height: 34px
+    height: 30px
     padding: 6px 12px
     font-size: 14px
     line-height: 1.42857143
-    color: #555
+    color: $primary-color
     background-color: $color-white
     background-image: none
-    border: 1px solid $color-gray
-    border-radius: 4px
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
+    border: 1px solid $color-blue
+    border-radius: 15px
+    box-shadow: none
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+
+  &__checkbox
+    font-weight: normal
+    font-size: rem(12)
+    cursor: pointer
+    text-align: center
+    display: block
+    padding-bottom: 5px
+    input[type="checkbox"]
+      display: none
+      &~i
+        color: $color-white
+        font-size: rem(15)
+        margin-right: 10px
+        vertical-align: 0
+        &.ion-android-checkbox-outline
+          display: none
+      &:checked
+        &~i
+          &.ion-android-checkbox-outline
+            display: inline-block
+          &.ion-android-checkbox-outline-blank
+            display: none
 
 label
   display: inline-block
@@ -50,15 +73,20 @@ label
 .has
   &-success .form-control
     border-color: #3c763d
-    box-shadow: inset 0 1px 1px rgba(#3c763d,.75)
+    box-shadow: none
 
   &-warning .form-control
     border-color: #8a6d3b
-    box-shadow: inset 0 1px 1px rgba(#8a6d3b,.75)
+    box-shadow: none
 
   &-error .form-control
-    border-color: #a94442
-    box-shadow: inset 0 1px 1px rgba(#a94442,.75)
+    border-color: $color-red
+    box-shadow: none
+    color: $color-red
+    box-shadow: 0 0 0 2px $color-white
+    &:focus
+      box-shadow: 0 0 0 2px $color-white
+      border-color: $color-red
 
   &-success .control-label
     color: #3c763d
@@ -67,4 +95,4 @@ label
     color: #8a6d3b
 
   &-error .control-label
-    color: #a94442
+    color: $color-red

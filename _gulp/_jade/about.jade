@@ -1,0 +1,138 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Список услуг' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 услуга' + ' - Клиника наркологии и психиатрии' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content
+      .container
+        
+        .row
+          .col-sm-3
+            include ./_include/_left
+            
+          .col-sm-9
+            h1 о нашей клинике
+            
+            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+            
+            .carousel
+              - for (var i = 0; i < 5; i++) {
+              .carousel__block
+                img(src="./tmp/img-article-2.jpg", alt="")
+              - }
+            
+            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+              
+            // Documents
+            .documents
+              .h1.h1--blue.h1--big Наши документы
+                
+              .documents__carousel.gallery
+                - for (var i = 0; i < 2; i++) {
+                .documents__block
+                  a(href="./tmp/certificate/img-certificate-1.png").gallery__item
+                    img(src="./tmp/certificate/img-certificate-1.png", alt="")
+                  span Грамота о награждении профессора Павличенко А.
+                .documents__block
+                  a(href="./tmp/certificate/img-certificate-2.png").gallery__item
+                    img(src="./tmp/certificate/img-certificate-2.png", alt="")
+                  span Грамота о награждении профессора Петрова И.
+                .documents__block
+                  a(href="./tmp/certificate/img-certificate-3.png").gallery__item
+                    img(src="./tmp/certificate/img-certificate-3.png", alt="")
+                  span Лицензия на оказание мед. услуг №654674654
+                .documents__block
+                  a(href="./tmp/certificate/img-certificate-4.png").gallery__item
+                    img(src="./tmp/certificate/img-certificate-4.png", alt="")
+                  span Лицензия на оказание мед. услуг №13246545
+                - }
+                
+            // Doctors
+            .doctors
+              .h1.h1--blue.h1--big наши Врачи
+              
+              .doctors__carousel
+                - for (var i = 1; i < 3; i++) {
+                .doctors__block
+                  .img
+                    img(src="./tmp/doctors/img-doctors-1.png", alt="")
+                  
+                  .doctors__block__title Иванов И.И.
+                    small Главный психиатр
+                  hr
+                  p Доктор медицинских наук профессор лауреат Премии Правительства РФ
+                  hr
+                  .doctors__block__contacts
+                    i.ion-android-call
+                    | +7 (964) 123-45-67
+                  .doctors__block__contacts 
+                    i.ion-android-mail
+                    a(href="mailto:#!") ivanov@mail.ru
+                    
+                .doctors__block
+                  .img
+                    img(src="./tmp/doctors/img-doctors-2.png", alt="")
+                  
+                  .doctors__block__title Иванова Е.Е.
+                    small Главный нарколог
+                  hr
+                  p Врач высшей категории опыт работы с 1986 года
+                  hr
+                  .doctors__block__contacts
+                    i.ion-android-call
+                    | +7 (964) 987-65-43
+                  .doctors__block__contacts 
+                    i.ion-android-mail
+                    a(href="mailto:#!") ivanova@mail.ru
+                    
+                .doctors__block
+                  .img
+                    img(src="./tmp/doctors/img-doctors-3.png", alt="")
+                  
+                  .doctors__block__title петров Н.Н.
+                    small Врач УЗ-диагностики
+                  hr
+                  p Доктор медицинских наук профессор лауреат Премии Правительства РФ
+                  hr
+                  .doctors__block__contacts
+                    i.ion-android-call
+                    | +7 (964) 456-32-10
+                  .doctors__block__contacts 
+                    i.ion-android-mail
+                    a(href="mailto:#!") petrov@mail.ru
+                    
+                .doctors__block
+                  .img
+                    img(src="./tmp/doctors/img-doctors-4.png", alt="")
+                  
+                  .doctors__block__title петрова к.к.
+                    small Главный терапевт
+                  hr
+                  p Врач высшей категории работает с 1994 года Член РАРЧ, ESHRE
+                  hr
+                  .doctors__block__contacts
+                    i.ion-android-call
+                    | +7 (964) 012-34-56
+                  .doctors__block__contacts 
+                    i.ion-android-mail
+                    a(href="mailto:#!") petrova@mail.ru
+                - }
+    
+    include ./_include/_footer
+    //- div(style="height: 500px; background-color: #000")
+      
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom

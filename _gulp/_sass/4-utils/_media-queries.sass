@@ -10,6 +10,24 @@
           padding-left: 80px
         padding-left: 35px
 
+  .help-family
+    padding-left: 20px
+    img
+      right: 0
+
+  .programm
+    padding-bottom: 20px
+
+  .article
+    &__row
+      &>div
+        &:first-child
+          width: 213px
+
+  .doctors
+    &__block
+      width: 151px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
   .footer
@@ -43,6 +61,48 @@
   .content
     padding-bottom: 30px
 
+  .help-family
+    margin-top: 30px
+    img
+      width: 286px
+    &__body
+      &>div
+        &+div
+          padding-left: 8px
+      .btn--white
+        border: 2px solid $color-blue
+        &:hover
+          border-color: $color-white
+
+    &__title
+      margin-bottom: 2px
+      br
+        display: block
+
+  .btn
+    &--programm
+      max-width: 155px
+      padding-left: 10px
+      padding-right: 10px
+
+  .article
+    &__row
+      &>div
+        &:first-child
+          width: 157px
+
+  .doctors
+    &__block
+      width: 156px
+
+@media (max-width: 991px) and (min-width: 767px)
+  .catalog
+    &__header
+      padding-top: 0
+      padding-bottom: 0
+      .icon
+        top: 3px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
   .footer
@@ -72,6 +132,101 @@
   .content
     padding-bottom: 20px
 
+  .header
+    &__line
+      &__block
+        text-align: center
+        &--right
+          padding-top: 3px
+      padding-top: 8px
+      padding-bottom: 8px
+    &__menu
+      margin-right: -10px
+      li
+        a
+          padding-left: 10px
+          padding-right: 10px
+
+  .catalog
+    &__navigation
+      margin-bottom: 40px
+      .ul
+        &>.li
+          margin-bottom: 5px
+        &--level2
+          opacity: 0
+          display: none
+          padding: 5px 20px 5px 20px
+          // transition: all 1s ease
+          animation: show 0.5s linear
+        .li
+          &--level1
+            border: 1px solid $color-blue
+            background-color: $color-blue
+            border-radius: 15px
+            &>a, &>span
+              padding: 3px 40px 5px 18px
+              display: block
+              color: $color-white
+              &::after
+                opacity: 1
+            &.is-active
+              background-color: $color-white
+              &>a, &>span
+                color: $color-blue
+              .ul--level2
+                opacity: 1
+                display: block
+    &__header
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 15px
+      max-width: 180px
+      white-space: nowrap
+
+  .logo
+    margin-bottom: 25px
+
+  .help-family
+    margin-top: 0
+    text-align: center
+    padding-left: 0
+    &__title
+      margin-bottom: 10px
+      br
+        display: none
+    &__body
+      display: inline-table
+    img
+      display: none
+
+  .programm
+    padding-bottom: 35px
+    &__bottom
+      padding-bottom: 15px
+      &__wrapper
+        display: block
+        &>div
+          display: block
+          line-height: 1.3
+          &+div
+            padding-top: 10px
+
+  .btn
+    &--programm
+      float: none
+      max-width: inherit
+      width: auto
+      padding-left: 15px
+      padding-right: 15px
+      display: inline-block
+
+  .article
+    &__row
+      &>div
+        &+div
+          padding-left: 0
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
   .col-xxs-12
@@ -95,6 +250,58 @@
         padding-top: 0
         padding-bottom: 0
 
+  .visible-xxs
+    display: block !important
+  .hidden-xxs
+    display: none !important
+
+  .header
+    &__menu
+      margin-right: 0
+      ul
+        display: none
+    &__phone
+      white-space: nowrap
+
+  .logo
+    margin-bottom: 40px
+
+  .help-family
+    height: auto
+    padding-top: 20px
+    padding-bottom: 20px
+    &__title
+      br
+        display: block
+    &__body
+      display: block
+      &>div
+        display: block
+        &+div
+          padding-left: 0
+          padding-top: 5px
+
+  .programm
+    &__row
+      &__title
+        line-height: 1.3
+    &__bottom
+      font-size: rem(12)
+      &__wrapper
+        strong
+          display: block
+          font-size: rem(18)
+
+  .documents
+    .h1, h1
+      width: 1px
+    &__block
+      padding-left: 10px
+      padding-right: 10px
+
+  .doctors
+    &__block
+      width: 151px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

@@ -1,1 +1,241 @@
 /* modules */
+.icon
+  display: inline-block
+  position: relative
+  vertical-align: middle
+
+  &--1
+    @include sprite($img-icon-1)
+
+.catalog
+  &__header
+    padding: 7px 0 6px 35px
+    position: relative
+    font-size: rem(20)
+    text-transform: uppercase
+    min-height: 40px
+    margin-bottom: 10px
+    .icon
+      position: absolute
+      left: 0
+      top: 0
+    div
+      line-height: 1.2
+
+.popup
+  position: relative
+  padding: 20px
+  width: auto
+  max-width: 500px
+  margin: 20px auto
+  overflow: hidden
+
+
+  &--form
+    width: 290px
+    border-radius: 0
+    padding: 0
+
+  &__body
+    background: #2bb4fa
+    background: -moz-linear-gradient(top,  #2bb4fa 0%, #2496d1 100%)
+    background: -webkit-linear-gradient(top,  #2bb4fa 0%,#2496d1 100%)
+    background: linear-gradient(to bottom,  #2bb4fa 0%,#2496d1 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2bb4fa', endColorstr='#2496d1',GradientType=0 )
+    border-radius: 3px
+
+  &__wrapper
+    padding: 30px 20px 30px 20px
+    max-width: inherit
+    color: $color-white
+    position: relative
+
+    background:
+      image: url('../img/popup-form-background-up.png'), url('../img/popup-form-background-down.png')
+      repeat: no-repeat
+      position: top left, right bottom
+
+    &--senks
+      background:
+        image: url('../img/popup-form-background-down.png')
+        position: right bottom
+      text-align: center
+      font-size: rem(16)
+      p
+        text-transform: uppercase
+        margin: 0
+
+  &__title
+    text-align: center
+    font-size: rem(20)
+    text-transform: uppercase
+    line-height: 1.2
+    margin-bottom: 15px
+    strong
+      display: block
+      line-height: 1.1
+      font-size: rem(27)
+
+  &__close
+    position: absolute
+    right: 10px
+    top: 10px
+    font-size: rem(20)
+    color: $color-white
+    // overflow: hidden
+    height: 20px
+    i
+      height: 20px
+      position: relative
+      top: -5px
+    &:hover
+      color: $color-dark
+
+/**/
+.help-family
+  background-color: $color-blue
+  position: relative
+  height: 112px
+  border-radius: 3px
+  color: $color-white
+  padding-left: 43px
+  padding-top: 25px
+  margin-top: 75px
+  font-size: rem(15)
+  img
+    position: absolute
+    right: 34px
+    bottom: 0
+    z-index: 10
+  &__title
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    font-size: rem(22)
+    margin-bottom: 15px
+    line-height: 1
+    position: relative
+    z-index: 20
+    br
+      display: none
+
+  &__body
+    display: table
+    position: relative
+    z-index: 20
+    &>div
+      display: table-cell
+      vertical-align: middle
+      &+div
+        padding-left: 15px
+
+/**/
+.programm
+  overflow: hidden
+  border-radius: 3px
+  padding-bottom: 35px
+
+  &__body
+    background: $color-lightnes
+    padding: 20px 20px 20px 55px
+    ul, ol
+      margin: 0
+      padding-left: 15px
+      li
+        margin-bottom: 3px
+    &__row
+      &:not(:last-child)
+        margin-bottom: 10px
+      p
+        margin: 0
+      &>i
+        position: absolute
+        margin-left: -30px
+        font-size: rem(14)
+        margin-top: -1px
+        color: #a4b8c5
+        &.ion-android-bookmark
+          font-size: rem(16)
+          margin-left: -29px
+
+  &__row
+    &__title
+      font-size: rem(20)
+      font-family: $font-roboto-light
+      line-height: 1
+      strong
+        color: $color-red
+        text-transform: uppercase
+
+  &__bottom
+    background-color: $color-blue
+    color: $color-white
+    padding: 8px 20px 8px 55px
+    font-size: rem(18)
+    font-family: $font-roboto-light
+    &__wrapper
+      display: table
+      width: 100%
+      &>div
+        display: table-cell
+        vertical-align: middle
+        line-height: 1
+    .ion-ios-pricetags
+      position: absolute
+      margin-left: -35px
+      font-size: rem(14)
+      margin-top: 3px
+
+/**/
+.article
+  &__img
+    position: relative
+    overflow: hidden
+    border-radius: 3px 3px 3px 0
+    a
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+    &:hover
+      .article__date
+        color: $color-white
+        background-color: $color-blue
+  &__date
+    height: 21px
+    line-height: 21px
+    background-color: $color-light
+    text-align: center
+    width: 80px
+    border-radius: 0 3px 0 0
+    position: absolute
+    left: 0
+    bottom: 0
+    font-size: rem(10)
+    color: #8698a6
+    transition: all 0.3s
+  &__row
+    display: table
+    width: 100%
+    font-size: rem(13)
+    color: #909090
+    margin-bottom: 35px
+    &>div
+      display: table-cell
+      vertical-align: top
+      &+div
+        padding-left: 30px
+      &:first-child
+        width: 262px
+    p
+      margin-bottom: 0
+  &__title
+    text-decoration: none
+    text-transform: uppercase
+    font-size: rem(15)
+    margin-bottom: 8px
+    font-family: $font-roboto-bold
+    color: $primary-color
+    display: block
+    &:hover
+      color: $color-blue

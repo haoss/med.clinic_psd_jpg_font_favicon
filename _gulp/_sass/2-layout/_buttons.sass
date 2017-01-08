@@ -21,8 +21,11 @@
   text-decoration: none
   text-transform: uppercase
   height: 30px
-  line-height: 27px
+  line-height: 28px
   font-family: $font-roboto-bold
+
+  i
+    margin-right: 5px
 
   &:hover, &:focus, &:active
     outline: none
@@ -55,7 +58,36 @@
   &--white
     border-color: $color-white
     background-color: $color-white
-    color: $color-dark
+    color: $color-blue
     &:hover
       background-color: $color-blue
       color: $color-white
+
+  &--header
+    width: 100%
+    max-width: 317px
+    display: block
+    margin: 10px auto 0
+
+  &--popup
+    color: $color-blue
+    box-shadow: 0 5px 15px rgba(#0974ab, .52)
+    width: 100%
+    font-size: rem(13)
+    &:hover
+      box-shadow: none
+
+  &--programm
+    color: $primary-color
+    height: 25px
+    line-height: 23px
+    display: block
+    float: right
+    width: 100%
+    max-width: 200px
+    font-size: rem(13)
+
+  &--more
+    max-width: 195px
+    width: 100%
+    font-size: rem(13)

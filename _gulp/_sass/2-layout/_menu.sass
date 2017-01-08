@@ -13,3 +13,77 @@ ul, ol
   &.list
     li
       line-height: 1.87
+
+.catalog__navigation
+  margin-bottom: 20px
+  ul
+    li
+      line-height: 1.2
+      margin-bottom: 5px
+      &.active
+        &>a
+          color: $color-blue
+    a
+      color: $primary-color
+      text-decoration: none
+      &:hover
+        color: $color-blue
+  .ul
+    .li
+      margin-bottom: 10px
+      &--level1
+        &>a, &>span
+          font-size: rem(15)
+          font-family: $font-roboto-bold
+          position: relative
+          &::after
+            content: "\f209"
+            position: absolute
+            font-family: $font-ionicons
+            right: 15px
+            top: 0
+            color: $color-white
+            font-size: rem(13)
+            margin-top: 6px
+            opacity: 0
+        &.is-active
+          &>a, &>span
+            &::after
+              content: "\f218"
+              color: $color-blue
+    &--level2
+      padding-top: 8px
+      padding-bottom: 10px
+      &>li
+        &>a, &>span
+          font-size: rem(13)
+          display: inline-block
+          padding-left: 16px
+          position: relative
+          &::before
+            content: "\f10a"
+            font-family: "Ionicons"
+            position: absolute
+            left: 0
+            top: 0
+            color: $color-blue
+            font-size: rem(14)
+
+/* navigation */
+.navigation
+  background-color: $color-blue
+  border-radius: 35px
+  overflow: hidden
+  ul
+    li
+      a
+        color: $color-white
+
+/* animation */
+@keyframes show
+  0%
+    opacity: 0
+    display: none
+  100%
+    opacity: 1
+    display: block

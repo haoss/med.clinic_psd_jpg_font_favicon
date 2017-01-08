@@ -18,17 +18,8 @@
 
     &__right
       float: right
-      nav
-        font-size: rem(14)
-        font-family: $font-roboto-bold
-        li
-          float: left
-          a
-            text-decoration: none
-            text-transform: uppercase
-            color: $primary-color
 
-  &__bottom
+  &__line
     background-color: $color-lightnes
     font-size: rem(11)
     color: #6b6b6b
@@ -46,3 +37,56 @@
       color: #636363
       line-height: 1
       display: block
+      margin-bottom: 3px
+    div
+      line-height: 1
+
+  &__menu
+    font-size: rem(14)
+    font-family: $font-roboto-bold
+    margin-right: -15px
+    li
+      float: left
+      a
+        text-decoration: none
+        text-transform: uppercase
+        color: $primary-color
+        display: block
+        height: 30px
+        line-height: 30px
+        padding: 0 15px
+        &:hover
+          color: $color-blue
+      &.active
+        a
+          color: $color-blue
+
+    &__button
+      height: 30px
+      width: 30px
+      border-radius: 50%
+      border: 1px solid $color-blue
+      background: $color-light
+      color: $color-blue
+      font-size: rem(19)
+      transition: all 0.3s
+      i
+        display: block
+        line-height: 1
+        height: 20px
+
+    &.is-open
+      .header__menu__button
+        background-color: $color-blue
+        color: $color-white
+
+  &__bottom
+    padding-top: 35px
+
+.logo
+  max-width: 320px
+  margin: -3px auto 0
+  img
+    display: block
+    max-width: 100%
+    height: auto
