@@ -4789,6 +4789,55 @@ ul, ol {
   .article__title:hover {
     color: #2bb4fa; }
 
+/**/
+.contacts__row {
+  display: table;
+  width: 100%;
+  margin-bottom: 30px; }
+  .contacts__row > div {
+    display: table-cell;
+    vertical-align: top; }
+    .contacts__row > div:last-child {
+      width: 1px; }
+    .contacts__row > div:not(:last-child) {
+      padding-right: 10px; }
+  .contacts__row p {
+    position: relative;
+    padding-left: 25px;
+    font-size: 1rem;
+    margin-bottom: 0; }
+    .contacts__row p:not(:last-child) {
+      margin-bottom: 23px; }
+    .contacts__row p small {
+      display: block;
+      margin-bottom: 3px; }
+    .contacts__row p i {
+      color: #2bb4fa;
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.0625rem;
+      display: block;
+      line-height: 0; }
+
+.contacts__form {
+  padding: 20px 35px;
+  background-color: #f6f9fb;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 360px; }
+  .contacts__form .btn {
+    display: block; }
+    .contacts__form .btn:not(:last-child) {
+      margin-bottom: 15px; }
+
+.contacts__map {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px; }
+  .contacts__map img {
+    width: 100%; }
+
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
   background: none !important;
@@ -5173,7 +5222,11 @@ ul, ol {
   .article__row > div:first-child {
     width: 157px; }
   .doctors__block {
-    width: 156px; } }
+    width: 156px; }
+  .contacts__form {
+    width: 195px;
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media (max-width: 991px) and (min-width: 767px) {
   .catalog__header {
@@ -5282,7 +5335,19 @@ ul, ol {
     padding-right: 15px;
     display: inline-block; }
   .article__row > div + div {
-    padding-left: 0; } }
+    padding-left: 0; }
+  .contacts__row {
+    display: block; }
+    .contacts__row > div {
+      display: block; }
+      .contacts__row > div:not(:last-child) {
+        padding: 0 0 25px 0; }
+      .contacts__row > div:last-child {
+        width: auto; }
+  .contacts__form {
+    width: auto;
+    padding-left: 50px;
+    padding-right: 50px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 479px) {
@@ -5340,7 +5405,10 @@ ul, ol {
     padding-left: 10px;
     padding-right: 10px; }
   .doctors__block {
-    width: 151px; } }
+    width: 151px; }
+  .contacts__form {
+    padding-left: 20px;
+    padding-right: 20px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 319px) {

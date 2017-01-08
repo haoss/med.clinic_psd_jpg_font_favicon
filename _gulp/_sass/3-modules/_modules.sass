@@ -239,3 +239,54 @@
     display: block
     &:hover
       color: $color-blue
+
+/**/
+.contacts
+  &__row
+    display: table
+    width: 100%
+    margin-bottom: 30px
+    &>div
+      display: table-cell
+      vertical-align: top
+      &:last-child
+        width: 1px
+      &:not(:last-child)
+        padding-right: 10px
+
+    p
+      position: relative
+      padding-left: 25px
+      font-size: rem(16)
+      margin-bottom: 0
+      &:not(:last-child)
+        margin-bottom: 23px
+      small
+        display: block
+        margin-bottom: 3px
+      i
+        color: $color-blue
+        position: absolute
+        left: 0
+        top: -2px
+        font-size: rem(17)
+        display: block
+        line-height: 0
+
+  &__form
+    padding: 20px 35px
+    background-color: $color-lightnes
+    border-radius: 3px
+    overflow: hidden
+    width: 360px
+    .btn
+      display: block
+      &:not(:last-child)
+        margin-bottom: 15px
+
+  &__map
+    position: relative
+    overflow: hidden
+    border-radius: 3px
+    img
+      width: 100%

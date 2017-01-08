@@ -1,0 +1,65 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - Клиника наркологии и психиатрии' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Content
+    .content
+      .container
+
+        .row
+          .col-sm-3
+            include ./_include/_left
+
+          .col-sm-9
+            h1 КОНТАКТЫ КЛИНИКИ
+
+            p Центр по лечению бесплодия занимает пространство площадью более 1.500 кв.м, оно создано по специальному  проекту для комфортного и бесстрессового пребывания пациентов в клинике. Наш центр в Москве разделен на 2 больших зоны: «поликлиническая зона» для приема пациентов и «операционная зона», включающая эмбриологическую лабораторию, лапароскопическую операционную и 2 изолированных малых операционных.
+            p Для комфортного пребывания пациентов в условиях дневного и круглосуточного стационара имеются 5 палат, в том числе палата интенсивной терапии. Также медицинский центр по лечению бесплодия располагает гостевой парковкой.
+
+            // Contacts
+            .contacts
+              .contacts__row
+                div
+                  p
+                    i.ion-ios-home
+                    small Фактический адрес:
+                    strong г. Москва, Певрая деловая, д2 стр.3
+                  p
+                    i.ion-android-call
+                    small Телефоны:
+                    strong +7 (964) 539-07-79;&nbsp;
+                      span.visible-xxs
+                      | +7 (964) 977-09-35
+                  p
+                    i.ion-ios-clock
+                    small Время приема:
+                    strong ПН-ВС, с 09:00 до 21:00
+
+                div
+                  .contacts__form
+                    a(href="#popup-form").btn.btn--blue.open-popup-link запись на прием
+                    a(href="#!").btn.btn--blue написать нам
+                    a(href="#!").btn.btn--red срочная помощь
+
+              .contacts__map
+                //- img(src="./tmp/contacts-map.jpg", alt="").img-responsive
+                img(src='https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=X9tzmTJh86zxoOjGONd9X7P0YDzESOUj&width=600&height=424&lang=ru_RU&sourceType=constructor', alt='')
+
+
+    include ./_include/_footer
+    //- div(style="height: 500px; background-color: #000")
+
+    include ./_include/_footer-js
+    include ./_include/_js-body-bottom
