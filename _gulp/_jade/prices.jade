@@ -1,0 +1,71 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Цены на услуги' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Цены на услуги' + ' - Клиника наркологии и психиатрии' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Content
+    .content
+      .container
+
+        .row
+          .col-sm-3
+            include ./_include/_left
+
+          .col-sm-9
+            h1 цены на услуги
+
+            .prices
+
+              .prices__title
+                .h3 Лечение алкоголизма
+
+              mixin pricesRow(title, price)
+                .prices__row
+                  .prices__row__head
+                    div.first
+                      i
+                    div= title
+                    div.last= price
+                  .prices__row__body
+                    p Очищение организма от алкогольного отравления, вывод токсинов, производится только в клинике. Эффективна к легкой степени алкогольного отравления (однократный прием небольшого количества алкоголя). Используется капельница с препаратами:
+
+                    ul.list
+                      li хлорид натрия, трисоль 200-400мл,
+                      li рибоксин,
+                      li калия хлорид
+                      li магнезия
+                      li аскорбиновая кислота,
+                      li витамин В6,
+                      li анальгетики.
+
+                    p В процедуру не входят снотворные и препараты симптоматической терапии абстинентного состояния. Капельница обладает общеукрепляющими свойствами и не показана для проведения процедуры выведения из запоя.
+
+              +pricesRow('Детоксикация', '3900р.')
+              +pricesRow('Лечение алкоголизма (стационар)', '6000р./сутки')
+              +pricesRow('Вывод из запоя (эконом)', '5500р.')
+              +pricesRow('Вывод из запоя (стандарт)', '7500р.')
+              +pricesRow('Вывод из запоя (премиум)', '12000р.')
+              +pricesRow('Кодирование алкоголизма', '4000р.')
+
+              .prices__title
+                .h3 Лечение наркомании
+
+              +pricesRow('Кодирование налтрексоном', '3900р.')
+              +pricesRow('Детоксикация от наркотиков', '6000р./сутки')
+
+    include ./_include/_footer
+    //- div(style="height: 500px; background-color: #000")
+
+    include ./_include/_footer-js
+    include ./_include/_js-body-bottom

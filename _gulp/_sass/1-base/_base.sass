@@ -53,7 +53,12 @@ body
 .h1
   &--blue
     color: $color-blue
+  &--big
     font-size: rem(26)
+  &--biggest
+    font-size: rem(32)
+    letter-spacing: 6px
+    font-family: $font-roboto-medium
 
 .h2, h2
   font-size: rem(22)
@@ -139,22 +144,22 @@ a.link
   top: 0
   position: fixed
   z-index: 10000
-  background-color: #241e20
+  background-color: $color-white
 
   &__block
-    background: #927a64
+    background: $color-blue
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
     position: absolute
     top: 50%
     left: 50%
-    color: #927a64
+    color: $color-blue
     text-indent: -9999em
     font-size: 11px
     animation-delay: -0.16s
     &:before, &:after
-      background: #927a64
+      background: $color-blue
       animation: load1 1s infinite ease-in-out
       width: 1em
       height: 4em
@@ -234,7 +239,7 @@ a.link
 
 /* section */
 .section
-  padding: 50px 0
+  padding: 40px 0
 
 .content
   padding-bottom: 40px

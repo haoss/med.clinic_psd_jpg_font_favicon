@@ -116,12 +116,61 @@ $(document).ready(function(){
     loop: true
   });
 
+  $('.information__carousel').owlCarousel({
+    items: 4,
+    margin: 30,
+    nav: true,
+    dots: false,
+    autoWidth: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 1,
+        autoWidth: false
+      },
+      321: {
+        autoWidth: true
+      }
+    }
+  });
+
+  $('.method__carousel').owlCarousel({
+    items: 4,
+    margin: 30,
+    nav: true,
+    dots: false,
+    autoWidth: true,
+    loop: true
+  });
+
   $('.carousel').owlCarousel({
     items: 1,
     loop: true,
     nav: true,
     dots: true
-  })
+  });
+
+  $('ol.list li').each(function(){
+    $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>')
+  });
+
+  // Price row
+  $('.prices__row').each(function(){
+    var __this = this;
+
+    $(__this).on('click', function(e){
+      $(__this).addClass('is-active');
+      $(__this).find('.prices__row__body').slideDown();
+    });
+
+    $(__this).children('.prices__row__head').on('click', function(e){
+      if ($(__this).hasClass('is-active')) {
+        e.stopPropagation();
+      }
+      $(__this).removeClass('is-active');
+      $(__this).find('.prices__row__body').slideUp();
+    });
+  });
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');

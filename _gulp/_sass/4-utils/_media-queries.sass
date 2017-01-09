@@ -28,7 +28,43 @@
     &__block
       width: 151px
 
+  .comments
+    &__row
+      &>div
+        &.last
+          width: 162px
 
+  .services
+    &__row
+      &>div
+        &.first
+          width: 294px
+
+  .information
+    &__block
+      width: 212px
+
+  .welcome
+    &__form
+      padding-left: 15px
+      padding-right: 15px
+    &__info
+      padding-right: 213px
+      padding-top: 30px
+    &__img
+      right: 15px
+      &__title
+        right: 0
+        white-space: nowrap
+        bottom: 10px
+        small
+          margin-top: 5px
+      img
+        width: 214px
+
+  .form
+    &__title
+      font-size: rem(16)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -102,6 +138,40 @@
       width: 195px
       padding-left: 15px
       padding-right: 15px
+
+  .comments
+    &__row
+      &>div
+        &.last
+          width: 125px
+
+  .services
+    &__row
+      &>div
+        &.first
+          width: 220px
+
+  .information
+    &__block
+      width: 158px
+
+  .welcome
+    margin-bottom: 235px
+    &__form
+      position: absolute
+      width: 100%
+      height: 190px
+      margin-top: 0
+      padding-top: 25px
+
+      .form-group
+        width: 33.3%
+        float: left
+        padding: 0 15px
+
+    .form
+      &__title
+        font-size: rem(20)
 
 @media (max-width: 991px) and (min-width: 767px)
   .catalog
@@ -249,6 +319,18 @@
       padding-left: 50px
       padding-right: 50px
 
+  .services
+    &__row
+      &>div
+        &.first
+          width: 130px
+
+  .information
+    h1, .h1
+      width: 1px
+    &__block
+      width: 262px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
   .col-xxs-12
@@ -330,9 +412,28 @@
       padding-left: 20px
       padding-right: 20px
 
+  .services
+    &__row
+      display: block
+      width: 100%
+      &>div
+        display: block
+        &+div
+          padding-left: 0
+          padding-top: 20px
+        &.first
+          width: 100%
+
+  .h1
+    &--biggest
+      font-size: rem(30)
+      letter-spacing: normal
+
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 319px)
-  /**/
+@media only screen and (max-width : 321px)
+  .information
+    &__block
+      margin: 0 auto
 
 
 /*==========  Mobile First Method  ==========*/

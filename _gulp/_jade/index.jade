@@ -1,31 +1,197 @@
 doctype
 
 html(lang="ru")
-  
+
   -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - Клиника наркологии и психиатрии' //title страницы для генерации верстки  
+  -var pageTitle = 'Главная' + ' - Клиника наркологии и психиатрии' //title страницы для генерации верстки
 
   include ./_include/_head
 
   body
-    
-    // Preloader
-    //- include ./_include/_preloader
-    
-    include ./_include/_header
-    
-    .content
-      .container
-        
-        h1 Главная 
-        
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
 
-    
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    .section
+      .container
+
+        .row
+          .col-sm-3
+            .catalog__header
+              i.icon.icon--1
+              div НАШИ УСЛУГИ
+
+            nav(role="navigation").catalog__navigation
+              ul.ul.ul--level1
+                li.li.li--level1
+                  span Наркологическая помощь
+                  ul.ul.ul--level2
+                    li
+                      a(href="#!") Нарколог на дом
+                    li
+                      a(href="#!") Вывод из запоя
+                    li
+                      a(href="#!") Капельница при отравлении
+                    li
+                      a(href="#!") Кодирование от алкоголизма
+                    li
+                      a(href="#!") Снятие наркотической ломки
+                    li
+                      a(href="#!") УБОД
+                    li
+                      a(href="#!") Детоксикация
+                    li
+                      a(href="#!") Имплантация налтрексона
+
+                li.li.li--level1
+                  span Психиатрическая помощь
+                  ul.ul.ul--level2
+                    li
+                      a(href="#!") Психиатр на дом
+                    li
+                      a(href="#!") Лечение шизофрении
+                    li
+                      a(href="#!") Лечение депрессии
+                    li
+                      a(href="#!") Лечение невроза
+                    li
+                      a(href="#!") Детский психиатр
+                    li
+                      a(href="#!") Геронтопсихиатр
+                    li
+                      a(href="#!") Освидетельствование
+
+
+          .col-sm-9
+            h1 КОНТАКТЫ КЛИНИКИ
+
+      //Welcome
+      .welcome
+        .container
+
+          .row
+            .col-md-9.col-md-push-3
+
+              .welcome__info
+                .h1 Добро пожаловать в клинику наркологии и психиатрии
+                p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.&nbsp;
+                  a(href="#!") Подробнее...
+
+                .welcome__img
+                  img(src="./img/welcome-doc.png", alt="")
+                  .welcome__img__title
+                    b ПАВЛИЧЕНКО АЛЕКСЕЙ ВИКТОРОВИЧ
+                    small Ведущий психиатр-нарколог
+
+            .col-md-3.col-md-pull-9
+
+              .welcome__form
+                .form
+                  .form__title запись на бесплатный первичный прием
+
+                  form(action="" method="post")
+                    .form-group
+                      label.hidden ФИО
+                      input(type="text" name="text" placeholder="Ф.И.О").form-control
+
+                    .form-group.has-error
+                      label.hidden Телефон
+                      input(type="text" name="text" placeholder="Телефон").form-control
+
+                    .form-group
+                      label.hidden Желаемая дата
+                      input(type="text" name="text" placeholder="Желаемая дата").form-control
+
+                    .form-group
+                      label.form__checkbox
+                        input(type="checkbox" name="checkbox")
+                        i.ion-android-checkbox-outline-blank
+                        i.ion-android-checkbox-outline
+                        span Подтвердите что вы не спам бот
+
+                    button(type="submit").btn.btn--white.btn--popup Отправить заявку
+
+      // Method
+      .method
+        .container
+          .h1.h1--blue.h1--biggest Наши методы
+
+          .method__carousel
+            - for (var i = 0; i < 2; i++) {
+            .method__block
+              a(href="#!")
+                figure
+                  img(src="./tmp/method/img-method-1.jpg", alt="").img-responsive
+                span.method__shadow
+                span.btn.btn--white психофармакология
+
+            .method__block
+              a(href="#!")
+                figure
+                  img(src="./tmp/method/img-method-2.jpg", alt="").img-responsive
+                span.method__shadow
+                span.btn.btn--white плазмаферез
+
+            .method__block
+              a(href="#!")
+                figure
+                  img(src="./tmp/method/img-method-2.jpg", alt="").img-responsive
+                span.method__shadow
+                span.btn.btn--white медксенон
+
+            .method__block
+              a(href="#!")
+                figure
+                  img(src="./tmp/method/img-method-3.jpg", alt="").img-responsive
+                span.method__shadow
+                span.btn.btn--white уфок и влок
+            - }
+
+      // Information
+      .information
+        .container
+
+          .h1.h1--blue.h1--biggest Информация клиентам
+
+          .information__carousel
+            - for (var i = 0; i < 2; i++) {
+            .information__block
+              a(href="#!")
+              figure
+                img(src="./tmp/information/img-info-1.jpg", alt="").img-responsive
+                .information__date 20.12.2016
+              .information__title РАБОТА КЛИНИКИ В НОВОГОДНИЕ ПРАЗДНИКИ
+              p График работы клиники в Новогодние праздники
+
+            .information__block
+              a(href="#!")
+              figure
+                img(src="./tmp/information/img-info-2.jpg", alt="").img-responsive
+                .information__date 21.12.2016
+              .information__title СНИЖЕНИЕ ПРАЙС-ЛИСТА
+              p С 1 сентября изменится цена на генетическую услугу.
+
+            .information__block
+              a(href="#!")
+              figure
+                img(src="./tmp/information/img-info-3.jpg", alt="").img-responsive
+                .information__date 22.12.2016
+              .information__title ОТКРЫТ ВЫХОД М. СПОРТИВНАЯ
+              p С 1 сентября изменится цена на генетическую услугу.
+
+            .information__block
+              a(href="#!")
+              figure
+                img(src="./tmp/information/img-info-4.jpg", alt="").img-responsive
+                .information__date 23.12.2016
+              .information__title СОСТОЯЛСЯ НАУЧНЫЙ СЕМИНАР
+              p С 1 сентября изменится цена на генетическую услугу.
+            - }
+
     include ./_include/_footer
-    div(style="height: 500px; background-color: #000")
-      
+    //- div(style="height: 500px; background-color: #000")
+
     include ./_include/_footer-js
     include ./_include/_js-body-bottom

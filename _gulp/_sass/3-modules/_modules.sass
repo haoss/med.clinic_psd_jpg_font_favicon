@@ -290,3 +290,352 @@
     border-radius: 3px
     img
       width: 100%
+
+/**/
+.prices
+  &__row
+    background-color: $color-lightnes
+    overflow: hidden
+    border-radius: 3px
+    margin-bottom: 12px
+    font-size: rem(13)
+    padding: 5px 20px
+    cursor: pointer
+    &__head
+      font-size: rem(14)
+      display: table
+      width: 100%
+      font-family: $font-roboto-medium
+      // cursor: pointer
+      transition: all 0.3s
+      &>div
+        display: table-cell
+        vertical-align: top
+        &+div
+          padding-left: 15px
+        &.last
+          width: 120px
+        &.first
+          width: 1px
+      i
+        font-style: normal
+        display: inline-block
+        height: 12px
+        line-height: 0
+        top: 1px
+        position: relative
+        &::before
+          content: "\f218"
+          font-family: $font-ionicons
+        font-size: rem(16)
+    p
+      margin-bottom: 15px
+    &__body
+      display: none
+      padding-top: 10px
+
+    &.is-active
+      cursor: default
+      .prices__row__body
+        // display: block
+      .prices__row__head
+        cursor: pointer
+        color: $color-blue
+        i
+          &::before
+            content: "\f209"
+    &+.prices__title
+      margin-top: 35px
+
+  &__title
+    text-transform: uppercase
+
+/**/
+.comments
+  &__row
+    display: table
+    width: 100%
+    margin-bottom: 35px
+    &>div
+      display: table-cell
+      vertical-align: top
+      &+div
+        padding-left: 30px
+      &.last
+        width: 195px
+
+  &__img
+    position: relative
+    a
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      z-index: 10
+    .zoom
+      position: absolute
+      right: 20px
+      bottom: 10px
+    &:hover
+      .zoom
+        background-color: $color-white
+        color: $color-blue
+
+  &__block
+    color: $color-dark
+    background-color: $color-lightnes
+    font-size: rem(13)
+    border-radius: 3px
+    padding: 15px 20px 20px 20px
+    margin-bottom: 12px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      border-left: 30px solid transparent
+      border-top: 30px solid $color-lightnes
+      bottom: -30px
+      left: 35px
+    &__title
+      font-size: rem(15)
+      text-transform: uppercase
+      margin-bottom: 15px
+      font-family: $font-roboto-bold
+      color: $primary-color
+    p
+      margin-bottom: 0
+      &:not(:last-child)
+        margin-bottom: 15px
+
+  &__name
+    padding-left: 80px
+    font-size: rem(13)
+    b
+      font-family: $font-roboto-bold
+      color: $color-blue
+      text-transform: uppercase
+    small
+      font-size: rem(11)
+      display: inline-block
+      padding-left: 15px
+
+.zoom
+  width: 30px
+  height: 30px
+  overflow: hidden
+  border-radius: 50%
+  background-color: $color-blue
+  text-align: center
+  color: $color-white
+  font-size: rem(16)
+  border: 1px solid $color-blue
+  position: relative
+  transition: all 0.3s
+  i
+    line-height: 0
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+  &:hover
+    background-color: $color-white
+    color: $color-blue
+
+/**/
+.services
+  &__row
+    display: table
+    width: 100%
+    margin-bottom: 30px
+    &>div
+      display: table-cell
+      vertical-align: top
+      &.first
+        width: 361px
+      &+div
+        padding-left: 30px
+
+    img
+      border-radius: 3px
+    .catalog__navigation
+      margin-bottom: 0
+
+    &__title
+      text-transform: uppercase
+      color: $color-blue
+      font-size: rem(18)
+      margin-bottom: 15px
+      line-height: 1.2
+
+  &__navigation
+    font-size: rem(14)
+    ul
+      &>li
+        &>a, &>span
+          display: inline-block
+          padding-left: 16px
+          position: relative
+          text-decoration: none
+          color: $primary-color
+          &::before
+            content: "\f10a"
+            font-family: "Ionicons"
+            position: absolute
+            left: 0
+            top: 1px
+            color: $color-blue
+            font-size: rem(14)
+        &>a
+          &:hover
+            color: $color-blue
+
+/**/
+.information
+  margin-bottom: 50px
+  &__block
+    position: relative
+    max-width: 263px
+    font-size: rem(13)
+    color: $color-dark
+    a
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      z-index: 10
+    p
+      margin-bottom: 0
+    figure
+      position: relative
+      overflow: hidden
+      border-radius: 3px
+      margin-bottom: 10px
+
+    &:hover
+      .information__title
+        color: $color-blue
+      .information__date
+        color: $color-white
+        background-color: $color-blue
+
+  &__title
+    color: $primary-color
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    margin-bottom: 5px
+    transition: all 0.3s
+
+  &__date
+    height: 21px
+    line-height: 21px
+    background-color: $color-light
+    text-align: center
+    width: 80px
+    border-radius: 0 3px 0 0
+    position: absolute
+    left: 0
+    bottom: -1px
+    font-size: rem(10)
+    color: #8698a6
+    transition: all 0.3s
+
+/**/
+.method
+  margin-bottom: 50px
+  &__block
+    position: relative
+    overflow: hidden
+    figure
+      position: relative
+      overflow: hidden
+      border-radius: 3px
+
+    &:hover
+      .method__shadow
+        opacity: 0.5
+      .btn
+        border-color: $color-blue
+        background-color: $color-blue
+        color: $color-white
+
+  &__shadow
+    position: absolute
+    z-index: 10
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: rgba($color-blue, .5)
+    opacity: 0
+    border-radius: 3px
+    transition: opacity 0.3s
+
+  .btn
+    position: absolute
+    width: 200px
+    left: 30px
+    bottom: 15px
+    z-index: 20
+    color: $color-dark
+    transition: all 0.3s
+
+/**/
+.welcome
+  background-color: $color-lightnes
+  margin-bottom: 65px
+
+  &__form
+    height: 100%
+    background-color: $color-blue
+    margin: -10px -15px -10px -15px
+    padding: 30px 20px 35px 20px
+    overflow: hidden
+    border-radius: 3px
+
+  &__img
+    position: absolute
+    right: 45px
+    bottom: 0
+
+    &__title
+      position: absolute
+      text-align: right
+      right: -30px
+      bottom: 18px
+      color: $primary-color
+      b
+        display: block
+        line-height: 1.2
+        font-size: rem(13)
+        text-transform: uppercase
+      small
+        display: block
+        line-height: 1.2
+        margin-top: 7px
+        font-size: rem(11)
+        color: $color-dark
+
+  &__info
+    padding-left: 15px
+    padding-top: 40px
+    padding-right: 275px
+    font-size: rem(13)
+    height: 280px
+
+    p
+      margin: 0
+
+    a
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+    .h1, h1
+      color: $color-blue
+      font-family: $font-roboto-bold
+      text-transform: uppercase
+      font-size: rem(28)
