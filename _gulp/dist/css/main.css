@@ -5219,6 +5219,46 @@ ol.list li .span {
       text-transform: uppercase;
       font-size: 1.75rem; }
 
+/**/
+.main-slider {
+  position: relative;
+  overflow: hidden;
+  border: 4px solid #e7eff5;
+  border-radius: 3px; }
+  .main-slider__title {
+    position: absolute;
+    right: 0;
+    bottom: 46px;
+    border: 4px solid #e7eff5;
+    border-right: 0;
+    background-color: #ffffff;
+    z-index: 10;
+    font-size: 1.375rem;
+    font-family: "RobotoLight";
+    text-transform: lowercase;
+    border-radius: 3px 0 0 3px;
+    padding: 15px 25px 15px 25px; }
+    .main-slider__title strong {
+      display: block;
+      line-height: 1;
+      color: #2bb4fa;
+      text-transform: uppercase;
+      font-size: 1.875rem; }
+    .main-slider__title span {
+      display: block;
+      line-height: 1;
+      margin-top: 5px; }
+  .main-slider .owl-controls {
+    top: inherit;
+    bottom: 35px; }
+    .main-slider .owl-controls .owl-dots {
+      margin-top: 0; }
+
+.main-block {
+  margin-bottom: 50px; }
+  .main-block .catalog__navigation {
+    margin-bottom: 0; }
+
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
   background: none !important;
@@ -5640,6 +5680,10 @@ ol.list li .span {
     width: 158px; }
   .welcome {
     margin-bottom: 235px; }
+    .welcome__info {
+      padding-left: 0;
+      margin-left: -15px;
+      padding-right: 250px; }
     .welcome__form {
       position: absolute;
       width: 100%;
@@ -5651,7 +5695,26 @@ ol.list li .span {
         float: left;
         padding: 0 15px; }
     .welcome .form__title {
-      font-size: 1.25rem; } }
+      font-size: 1.25rem; }
+    .welcome .form__checkbox {
+      margin-bottom: 0;
+      padding-bottom: 0; }
+    .welcome .form-group--checkbox {
+      width: 100%;
+      float: none;
+      padding-left: 0;
+      padding-right: 0; }
+    .welcome .form .btn {
+      max-width: 346px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block; }
+  .main-slider__title {
+    font-size: 1rem; }
+    .main-slider__title strong {
+      font-size: 1.375rem; }
+  .main-block {
+    margin-bottom: 30px; } }
 
 @media (max-width: 991px) and (min-width: 767px) {
   .catalog__header {
@@ -5778,7 +5841,37 @@ ol.list li .span {
   .information h1, .information .h1 {
     width: 1px; }
   .information__block {
-    width: 262px; } }
+    width: 262px; }
+  .main-slider {
+    margin-bottom: 40px; }
+    .main-slider__title {
+      font-size: 0.75rem;
+      padding: 10px 15px; }
+      .main-slider__title strong {
+        font-size: 1.0625rem; }
+  .welcome {
+    margin-bottom: 50px; }
+    .welcome__img {
+      display: none; }
+    .welcome__info {
+      padding: 45px 15px 25px 15px;
+      height: auto; }
+    .welcome__form {
+      position: inherit;
+      margin: 0;
+      width: 100%;
+      height: auto; }
+      .welcome__form .form-group {
+        width: 100%;
+        float: none;
+        padding-left: 0;
+        padding-right: 0; }
+    .welcome .form__title {
+      font-size: 1.625rem;
+      max-width: 350px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 479px) {
@@ -5852,7 +5945,13 @@ ol.list li .span {
         width: 100%; }
   .h1--biggest {
     font-size: 1.875rem;
-    letter-spacing: normal; } }
+    letter-spacing: normal; }
+  .welcome__info {
+    padding-top: 35px; }
+    .welcome__info .h1, .welcome__info h1 {
+      font-size: 1.5rem; }
+  .welcome .form__title {
+    font-size: 1.25rem; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 321px) {

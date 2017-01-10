@@ -639,3 +639,45 @@
       font-family: $font-roboto-bold
       text-transform: uppercase
       font-size: rem(28)
+
+/**/
+.main-slider
+  position: relative
+  overflow: hidden
+  border: 4px solid $color-light
+  border-radius: 3px
+  &__title
+    position: absolute
+    right: 0
+    bottom: 46px
+    border: 4px solid $color-light
+    border-right: 0
+    background-color: $color-white
+    z-index: 10
+    font-size: rem(22)
+    font-family: $font-roboto-light
+    text-transform: lowercase
+    border-radius: 3px 0 0 3px
+    padding: 15px 25px 15px 25px
+    strong
+      display: block
+      line-height: 1
+      color: $color-blue
+      text-transform: uppercase
+      font-size: rem(30)
+    span
+      display: block
+      line-height: 1
+      margin-top: 5px
+
+  .owl-controls
+    top: inherit
+    bottom: 35px
+    .owl-dots
+      margin-top: 0
+
+.main-block
+  margin-bottom: 50px
+
+  .catalog__navigation
+    margin-bottom: 0

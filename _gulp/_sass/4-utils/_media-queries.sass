@@ -157,6 +157,10 @@
 
   .welcome
     margin-bottom: 235px
+    &__info
+      padding-left: 0
+      margin-left: -15px
+      padding-right: 250px
     &__form
       position: absolute
       width: 100%
@@ -172,6 +176,32 @@
     .form
       &__title
         font-size: rem(20)
+
+    .form
+      &__checkbox
+        margin-bottom: 0
+        padding-bottom: 0
+      &-group
+        &--checkbox
+          width: 100%
+          float: none
+          padding-left: 0
+          padding-right: 0
+
+      .btn
+        max-width: 346px
+        margin-left: auto
+        margin-right: auto
+        display: block
+
+  .main
+    &-slider
+      &__title
+        font-size: rem(16)
+        strong
+          font-size: rem(22)
+    &-block
+      margin-bottom: 30px
 
 @media (max-width: 991px) and (min-width: 767px)
   .catalog
@@ -331,6 +361,42 @@
     &__block
       width: 262px
 
+  .main
+    &-slider
+      margin-bottom: 40px
+      &__title
+        font-size: rem(12)
+        padding: 10px 15px
+        strong
+          font-size: rem(17)
+
+  .welcome
+    margin-bottom: 50px
+    &__img
+      display: none
+    &__info
+      padding: 45px 15px 25px 15px
+      height: auto
+    &__form
+      position: inherit
+      margin: 0
+      width: 100%
+      height: auto
+
+      .form-group
+        width: 100%
+        float: none
+        padding-left: 0
+        padding-right: 0
+
+    .form
+      &__title
+        font-size: rem(26)
+        max-width: 350px
+        text-align: center
+        margin-left: auto
+        margin-right: auto
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
   .col-xxs-12
@@ -428,6 +494,16 @@
     &--biggest
       font-size: rem(30)
       letter-spacing: normal
+
+  .welcome
+    &__info
+      padding-top: 35px
+      .h1, h1
+        font-size: rem(24)
+    .form
+      &__title
+        font-size: rem(20)
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 321px)

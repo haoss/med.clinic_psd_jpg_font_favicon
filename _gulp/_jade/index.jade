@@ -15,57 +15,72 @@ html(lang="ru")
     include ./_include/_header
 
     .section
-      .container
 
-        .row
-          .col-sm-3
-            .catalog__header
-              i.icon.icon--1
-              div НАШИ УСЛУГИ
+      // Main block
+      .main-block
+        .container
+          .row
+            .col-sm-9.col-sm-push-3
 
-            nav(role="navigation").catalog__navigation
-              ul.ul.ul--level1
-                li.li.li--level1
-                  span Наркологическая помощь
-                  ul.ul.ul--level2
-                    li
-                      a(href="#!") Нарколог на дом
-                    li
-                      a(href="#!") Вывод из запоя
-                    li
-                      a(href="#!") Капельница при отравлении
-                    li
-                      a(href="#!") Кодирование от алкоголизма
-                    li
-                      a(href="#!") Снятие наркотической ломки
-                    li
-                      a(href="#!") УБОД
-                    li
-                      a(href="#!") Детоксикация
-                    li
-                      a(href="#!") Имплантация налтрексона
+              // Main slider
+              .main-slider
 
-                li.li.li--level1
-                  span Психиатрическая помощь
-                  ul.ul.ul--level2
-                    li
-                      a(href="#!") Психиатр на дом
-                    li
-                      a(href="#!") Лечение шизофрении
-                    li
-                      a(href="#!") Лечение депрессии
-                    li
-                      a(href="#!") Лечение невроза
-                    li
-                      a(href="#!") Детский психиатр
-                    li
-                      a(href="#!") Геронтопсихиатр
-                    li
-                      a(href="#!") Освидетельствование
+                .main-slider__title
+                  strong Центр лечения
+                  span зависимостей и психических расстройств
 
+                .main-slider__carousel
+                  .main-slider__block
+                    img(src="./tmp/main-slide.jpg", alt="").img-responsive
+                  .main-slider__block
+                    img(src="./tmp/main-slide.jpg", alt="").img-responsive
+                  .main-slider__block
+                    img(src="./tmp/main-slide.jpg", alt="").img-responsive
 
-          .col-sm-9
-            h1 КОНТАКТЫ КЛИНИКИ
+            .col-sm-3.col-sm-pull-9
+              .catalog__header
+                i.icon.icon--1
+                div НАШИ УСЛУГИ
+
+              nav(role="navigation").catalog__navigation
+                ul.ul.ul--level1
+                  li.li.li--level1
+                    span Наркологическая помощь
+                    ul.ul.ul--level2
+                      li
+                        a(href="#!") Нарколог на дом
+                      li
+                        a(href="#!") Вывод из запоя
+                      li
+                        a(href="#!") Капельница при отравлении
+                      li
+                        a(href="#!") Кодирование от алкоголизма
+                      li
+                        a(href="#!") Снятие наркотической ломки
+                      li
+                        a(href="#!") УБОД
+                      li
+                        a(href="#!") Детоксикация
+                      li
+                        a(href="#!") Имплантация налтрексона
+
+                  li.li.li--level1
+                    span Психиатрическая помощь
+                    ul.ul.ul--level2
+                      li
+                        a(href="#!") Психиатр на дом
+                      li
+                        a(href="#!") Лечение шизофрении
+                      li
+                        a(href="#!") Лечение депрессии
+                      li
+                        a(href="#!") Лечение невроза
+                      li
+                        a(href="#!") Детский психиатр
+                      li
+                        a(href="#!") Геронтопсихиатр
+                      li
+                        a(href="#!") Освидетельствование
 
       //Welcome
       .welcome
@@ -104,7 +119,7 @@ html(lang="ru")
                       label.hidden Желаемая дата
                       input(type="text" name="text" placeholder="Желаемая дата").form-control
 
-                    .form-group
+                    .form-group.form-group--checkbox
                       label.form__checkbox
                         input(type="checkbox" name="checkbox")
                         i.ion-android-checkbox-outline-blank
@@ -189,6 +204,10 @@ html(lang="ru")
               .information__title СОСТОЯЛСЯ НАУЧНЫЙ СЕМИНАР
               p С 1 сентября изменится цена на генетическую услугу.
             - }
+
+      // Main map
+      .main-map
+        
 
     include ./_include/_footer
     //- div(style="height: 500px; background-color: #000")

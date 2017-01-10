@@ -150,6 +150,13 @@ $(document).ready(function(){
     dots: true
   });
 
+  $('.main-slider__carousel').owlCarousel({
+    items: 1,
+    nav: false,
+    dots: true,
+    loop: true
+  })
+
   $('ol.list li').each(function(){
     $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>')
   });
