@@ -94,6 +94,7 @@ $(document).ready(function(){
     items: 4,
     nav: true,
     dots: false,
+    loop: true,
     responsive: {
       0: {
         items: 2
@@ -155,10 +156,47 @@ $(document).ready(function(){
     nav: false,
     dots: true,
     loop: true
-  })
+  });
 
+  // ol list marker
   $('ol.list li').each(function(){
     $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>')
+  });
+
+  // navigation
+  $('.navigation__button').on('click', function(e){
+    e.stopPropagation();
+    $(this).parents('nav.navigation').toggleClass('is-open');
+  });
+  $('.navigation__mobile').on('click', function(){
+    $(this).parent().removeClass('is-open');
+  });
+  function navigationMobile() {
+    var ul = $('.navigation ul');
+    var li = ul.find('li');
+    var div = $('.navigation__mobile div');
+    var html = $('.navigation ul').find('li.active a').html();
+
+    div.html(html) ;
+
+    $('.navigation ul li a').on('click', function(e){
+      e.preventDefault();
+
+      li.removeClass('active');
+      $(this).parent().addClass('active');
+      $(this).parents('nav.navigation').removeClass('is-open');
+
+      div.html(e.currentTarget.innerHTML);
+      // console.log(e.currentTarget.innerHTML);
+    });
+
+    // console.log(div.innerHTML = html);
+  }
+  navigationMobile();
+
+  // Articles list date hover
+  $('.article__title').on('hover', function(){
+    $(this).parents('.article__row').toggleClass('is-hover');
   });
 
   // Price row
@@ -178,6 +216,33 @@ $(document).ready(function(){
       $(__this).find('.prices__row__body').slideUp();
     });
   });
+
+  // Main map footer
+  function mainMapFooter(){
+    var width = $(window).width();
+    var mainMapButton = $('.main-map__button');
+
+    if (width > 767 && $('.footer__wrapper').is(':visible')) {
+      mainMapButton.on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('is-active');
+        $('.footer').toggleClass('is-map-open');
+        $('.main-map').toggleClass('is-map-open');
+
+        if (!$(this).hasClass('is-active')) {
+          $(this).html('Развернуть карту<i class="ion-android-arrow-down"></i>')
+        } else {
+          $(this).html('Свернуть карту<i class="ion-android-arrow-up"></i>')
+        }
+      });
+    } else if (width <= 767 && $('.footer__wrapper').is(':hidden')) {
+      mainMapButton.on('click', function(){
+        window.location.href = $(this).data('href')
+      })
+    }
+  }
+  mainMapFooter();
+  $(window).resize(mainMapFooter);
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');

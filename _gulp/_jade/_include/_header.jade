@@ -1,62 +1,68 @@
-// Header
-header.header.is-active
+.header__top
   
-  .header__top
-    .container
-      
-      .row
-        .col-sm-6.col-xs-5
-          .header__top__left
-            div
-              .header__phone 
-                small Обратный звонок
-                div 8 (964) 
-                  strong 539-07-79
-            div.hidden-xs
-              a(href="#popup-form").btn.btn--blue.open-popup-link запись на прием
-          
-        .col-sm-6.col-xs-7
-          .header__top__right
-            nav(role="navigation").header__menu
-              button.header__menu__button(type="button").visible-xxs
-                i.ion-android-menu
-              ul
-                li: a(href="#!") Цена на услуги
-                li: a(href="#!") Контакты
+  .container
+    
+    .row
+      .col-sm-6.col-xs-5
+        .header__top__left
+          div
+            .header__phone 
+              small Обратный звонок
+              div 8 (964) 
+                strong 539-07-79
+          div.hidden-xs
+            a(href="#popup-form").btn.btn--blue.open-popup-link запись на прием
         
-        .col-xs-12.visible-xs
-          a(href="#popup-form").btn.btn--blue.btn--header.open-popup-link запись на прием
-      
-  .header__line
-    .container
-      
-      .row
-        .col-sm-7
-          .header__line__block
-            span.hidden-xxs График работы: 
-            b ВЫЕЗД НА ДОМ КРУГЛОСУТОЧНО И АНОНИМНО
-        .col-sm-5 
-          .header__line__block.header__line__block--right
-            span.hidden-xxs Амбулаторный прием: 
-            b ПН-ВС 7д/24ч
-
-  .header__bottom
-    .container
-      
-      .row
-        .col-md-3.col-sm-4.col-xs-12
-          
-          .logo
-            a(href="#!")
-              img(src="./img/logo.png", alt="")
-          
-        .col-md-9.col-sm-8.col-xs-12
-          
-          nav(role="navigation").navigation
+      .col-sm-6.col-xs-7
+        .header__top__right
+          nav(role="navigation").header__menu
+            button.header__menu__button(type="button").visible-xxs
+              i.ion-android-menu
             ul
-              li
-                a(href="#!") Скорая помощь на дому 
-              li
-                a(href="#!") Стационар
-              li
-                a(href="#!") Реабилитационный центр 
+              li: a(href="#!") Цена на услуги
+              li: a(href="#!") Контакты
+      
+      .col-xs-12.visible-xs
+        a(href="#popup-form").btn.btn--blue.btn--header.open-popup-link запись на прием
+    
+.header__line
+  .container
+    
+    .row
+      .col-sm-7
+        .header__line__block
+          span.hidden-xxs График работы: 
+          b ВЫЕЗД НА ДОМ КРУГЛОСУТОЧНО И АНОНИМНО
+      .col-sm-5 
+        .header__line__block.header__line__block--right
+          span.hidden-xxs Амбулаторный прием: 
+          b ПН-ВС 7д/24ч
+
+.header__bottom
+  .container
+    
+    .row
+      .col-md-3.col-sm-4.col-xs-12
+        
+        .logo
+          a(href="#!")
+            img(src="./img/logo.png", alt="")
+        
+      .col-md-9.col-sm-8.col-xs-12
+        
+        nav(role="navigation").navigation
+        
+          .navigation__mobile
+            button(type="button").navigation__button
+              i.ion-android-arrow-down
+            div
+            
+          ul
+            li.active
+              a(href="#!") 
+                i.icon.icon--2
+                | Скорая помощь на дому 
+            li
+              a(href="#!") Стационар
+            li
+              a(href="#!") Реабилитационный центр 

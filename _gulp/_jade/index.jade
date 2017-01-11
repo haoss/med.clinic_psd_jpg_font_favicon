@@ -12,15 +12,18 @@ html(lang="ru")
     // Preloader
     include ./_include/_preloader
 
-    include ./_include/_header
+    // Header
+    header.header
+      include ./_include/_header
 
-    .section
+    // Content
+    .content.no--padding-bottom
 
       // Main block
       .main-block
         .container
           .row
-            .col-sm-9.col-sm-push-3
+            .col-md-9.col-md-push-3.col-sm-8.col-sm-push-4
 
               // Main slider
               .main-slider
@@ -37,7 +40,7 @@ html(lang="ru")
                   .main-slider__block
                     img(src="./tmp/main-slide.jpg", alt="").img-responsive
 
-            .col-sm-3.col-sm-pull-9
+            .col-md-3.col-md-pull-9.col-sm-4.col-sm-pull-8
               .catalog__header
                 i.icon.icon--1
                 div НАШИ УСЛУГИ
@@ -207,7 +210,20 @@ html(lang="ru")
 
       // Main map
       .main-map
-        
+        .main-map__body
+        .main-map__info
+          .container
+            
+            .main-map__text
+              strong г. Москва
+              p ул. Первая деловая, д2, оф.3
+                br
+                | т. 8 (964) 539-07-79
+              
+              a(href="#popup-form2").btn.btn--blue.open-popup-link Заказать звонок
+              
+            a(href="contacts.html").main-map__button Развернуть карту
+              i.ion-android-arrow-down
 
     include ./_include/_footer
     //- div(style="height: 500px; background-color: #000")

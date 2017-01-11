@@ -90,7 +90,7 @@
             </div>
         </div>
         <!-- Header-->
-        <header class="header is-active">
+        <header class="header">
             <div class="header__top">
                 <div class="container">
                     <div class="row">
@@ -139,8 +139,12 @@
                         </div>
                         <div class="col-md-9 col-sm-8 col-xs-12">
                             <nav role="navigation" class="navigation">
+                                <div class="navigation__mobile">
+                                    <button type="button" class="navigation__button"><i class="ion-android-arrow-down"></i></button>
+                                    <div></div>
+                                </div>
                                 <ul>
-                                    <li><a href="#!">Скорая помощь на дому </a></li>
+                                    <li class="active"><a href="#!"> <i class="icon icon--2"></i>Скорая помощь на дому </a></li>
                                     <li><a href="#!">Стационар</a></li>
                                     <li><a href="#!">Реабилитационный центр </a></li>
                                 </ul>
@@ -150,12 +154,13 @@
                 </div>
             </div>
         </header>
-        <div class="section">
+        <!-- Content-->
+        <div class="content no--padding-bottom">
             <!-- Main block-->
             <div class="main-block">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-9 col-sm-push-3">
+                        <div class="col-md-9 col-md-push-3 col-sm-8 col-sm-push-4">
                             <!-- Main slider-->
                             <div class="main-slider">
                                 <div class="main-slider__title"><strong>Центр лечения</strong><span>зависимостей и психических расстройств</span></div>
@@ -166,7 +171,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3 col-sm-pull-9">
+                        <div class="col-md-3 col-md-pull-9 col-sm-4 col-sm-pull-8">
                             <div class="catalog__header"><i class="icon icon--1"></i>
                                 <div>НАШИ УСЛУГИ</div>
                             </div>
@@ -333,45 +338,19 @@
                 </div>
             </div>
             <!-- Main map-->
-            <div class="main-map"></div>
-        </div>
-        <!-- Footer-->
-        <footer class="footer">
-            <div class="footer__top">
-                <div class="container">
-                    <div class="row footer__top__row">
-                        <div class="col-sm-4 col-xs-6 col-xxs-12">
-                            <div class="footer__info">
-                                <div>
-                                    <div class="img"><i class="ion-medkit"></i></div>
-                                </div>
-                                <div>
-                                    <div class="footer__info__title">Адрес клиники</div>
-                                    <p>г. Москва, ул. Первая деловая, д2, оф 3</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-6 col-xxs-12">
-                            <div class="footer__info">
-                                <div>
-                                    <div class="img"><i class="ion-iphone"></i></div>
-                                </div>
-                                <div>
-                                    <div class="footer__info__title">Горячая линия</div>
-                                    <p>+7 (987) 654-32-10</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <div class="footer__info footer__info--call">
-                                <div>
-                                    <div class="footer__info__title">Остались вопросы?</div><a href="#popup-form2" class="btn btn--blue open-popup-link">заказать звонок</a>
-                                </div>
-                            </div>
-                        </div>
+            <div class="main-map">
+                <div class="main-map__body"></div>
+                <div class="main-map__info">
+                    <div class="container">
+                        <div class="main-map__text"><strong>г. Москва</strong>
+                            <p>ул. Первая деловая, д2, оф.3<br>т. 8 (964) 539-07-79</p><a href="#popup-form2" class="btn btn--blue open-popup-link">Заказать звонок</a>
+                        </div><a href="contacts.html" class="main-map__button">Развернуть карту<i class="ion-android-arrow-down"></i></a>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
             <div class="footer__wrapper hidden-xs">
                 <div class="container">
                     <div class="row footer__row">

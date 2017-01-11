@@ -1,35 +1,36 @@
 // Footer
 footer.footer
   
-  .footer__top
-    .container
-      
-      .row.footer__top__row
-        .col-sm-4.col-xs-6.col-xxs-12
-          .footer__info
-            div
-              .img
-                i.ion-medkit
-            div
-              .footer__info__title Адрес клиники
-              p г. Москва, ул. Первая деловая, д2, оф 3
-              
-        .col-sm-4.col-xs-6.col-xxs-12
-          .footer__info
-            div
-              .img
-                i.ion-iphone
-            div
-              .footer__info__title Горячая линия
-              p +7 (987) 654-32-10
-              
-        .col-sm-4.col-xs-12
-          .footer__info.footer__info--call
-            div
-              .footer__info__title Остались вопросы?
-              a(href="#popup-form2").btn.btn--blue.open-popup-link заказать звонок
-              
-  
+  if active != 'Главная'
+    .footer__top
+      .container
+        
+        .row.footer__top__row
+          .col-sm-4.col-xs-6.col-xxs-12
+            .footer__info
+              div
+                .img
+                  i.ion-medkit
+              div
+                .footer__info__title Адрес клиники
+                p г. Москва, ул. Первая деловая, д2, оф 3
+                
+          .col-sm-4.col-xs-6.col-xxs-12
+            .footer__info
+              div
+                .img
+                  i.ion-iphone
+              div
+                .footer__info__title Горячая линия
+                p +7 (987) 654-32-10
+                
+          .col-sm-4.col-xs-12
+            .footer__info.footer__info--call
+              div
+                .footer__info__title Остались вопросы?
+                a(href="#popup-form2").btn.btn--blue.open-popup-link заказать звонок
+                
+    
   .footer__wrapper.hidden-xs
     .container
       

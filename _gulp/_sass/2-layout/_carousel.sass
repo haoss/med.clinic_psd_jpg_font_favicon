@@ -80,9 +80,12 @@
     position: relative
     padding: 0 15px
     max-width: 213px
+    transition: color 0.3s
     img
       margin: 0 auto 10px
       display: block
+    &:hover
+      color: $color-blue
 
 .doctors
   &__block
@@ -114,6 +117,7 @@
     &__contacts
       position: relative
       padding-left: 20px
+      font-family: $font-roboto-bold
       i
         position: absolute
         color: #9f9f9f

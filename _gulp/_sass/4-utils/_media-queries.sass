@@ -66,8 +66,18 @@
     &__title
       font-size: rem(16)
 
+  .navigation
+    font-size: rem(15)
+    &>ul
+      &>li
+        &>a, &>span
+          min-width: 120px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+  .logo
+    max-width: 211px
+
   .footer
     &__row
       &>div
@@ -202,14 +212,61 @@
           font-size: rem(22)
     &-block
       margin-bottom: 30px
+      .catalog__header
+        margin-top: -130px
 
-@media (max-width: 991px) and (min-width: 767px)
-  .catalog
-    &__header
-      padding-top: 0
-      padding-bottom: 0
-      .icon
-        top: 3px
+  .navigation
+    background: none
+    height: auto
+    border-radius: 0
+    font-size: rem(18)
+    max-width: 450px
+    margin: 0 auto
+    &>ul
+      display: block
+      &>li
+        display: block
+        &:not(:last-child)
+          margin-bottom: 7px
+        &>a, &>span
+          background: #2bb4fa linear-gradient(to bottom, #2bb4fa, #2496d1)
+          border-radius: 35px
+          &::before
+            display: none
+
+
+  .catalog__navigation
+    .ul
+      .li
+        &:last-child
+          margin-bottom: 0
+
+  .header--all
+    .navigation
+      overflow: inherit
+      &__button
+        display: block
+      &.is-open
+        ul
+          display: block
+          opacity: 1
+          // top: 60px
+          // transition: top 0.3s ease-out
+      &__mobile
+        display: block
+      ul
+        position: absolute
+        top: 60px
+        z-index: 10
+        display: none
+        opacity: 0
+        // transition: all 0.3s
+        animation: show 0.3s linear
+        &>li
+          &.active
+            display: none
+
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -257,6 +314,9 @@
 
   .catalog
     &__navigation
+      max-width: 450px
+      margin-left: auto
+      margin-right: auto
       margin-bottom: 40px
       .ul
         &>.li
@@ -289,11 +349,15 @@
       margin-left: auto
       margin-right: auto
       margin-bottom: 15px
-      max-width: 180px
+      max-width: 270px
       white-space: nowrap
+      font-size: rem(30)
+      padding-left: 45px
+      padding-top: 2px
 
   .logo
     margin-bottom: 25px
+    max-width: 316px
 
   .help-family
     margin-top: 0
@@ -370,6 +434,10 @@
         strong
           font-size: rem(17)
 
+    &-block
+      .catalog__header
+        margin-top: 0
+
   .welcome
     margin-bottom: 50px
     &__img
@@ -430,11 +498,48 @@
       margin-right: 0
       ul
         display: none
+      &.is-open
+        ul
+          position: fixed
+          background: rgba($color-blue, 0.95)
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          z-index: 100
+          padding-top: 25px
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-direction: column
+          li
+            float: none
+            a
+              color: $color-white
+              text-align: center
+              font-family: $font-roboto
+              font-size: rem(20)
+              height: auto
+              line-height: inherit
+              padding: 15px 0
+        .header__menu__button
+          position: fixed
+          z-index: 150
+          top: 15px
+          right: 15px
+          background-color: rgba($color-blue, 0.95)
+          color: $color-red
+          border-color: $color-red
+          i
+            &::before
+              content: "\f12a"
+
     &__phone
       white-space: nowrap
 
   .logo
-    margin-bottom: 40px
+    margin-bottom: 30px
+    max-width: 267px
 
   .help-family
     height: auto
@@ -504,6 +609,42 @@
       &__title
         font-size: rem(20)
 
+  .navigation
+    font-size: rem(17)
+
+  .main-block
+    margin-bottom: 50px
+
+  .header--all
+    .navigation
+      font-size: rem(16)
+      &__mobile
+        text-align: left
+        padding: 0 65px 0 20px
+        line-height: normal
+        div
+          height: 54px
+          display: table-cell
+          vertical-align: middle
+        .icon--2
+          // float: left
+          // margin-top: 10px
+          &+*
+            font-size: rem(11)
+      &__button
+        width: 60px
+        i
+          margin-left: 19px
+      .has-icon
+        line-height: inherit
+
+@media only screen and (max-width : 366px)
+  .header--all
+    .navigation
+      &__mobile
+        .icon--2
+          float: left
+          margin-top: 10px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 321px)
