@@ -39,6 +39,7 @@
       &>div
         &.first
           width: 294px
+          max-width: 294px
 
   .information
     &__block
@@ -49,7 +50,7 @@
       padding-left: 15px
       padding-right: 15px
     &__info
-      padding-right: 213px
+      padding-right: 245px
       padding-top: 30px
     &__img
       right: 15px
@@ -72,6 +73,13 @@
       &>li
         &>a, &>span
           min-width: 120px
+
+  .we-treat
+    &__block
+      .img-thumb
+        width: 210px !important
+    &__title
+      font-size: rem(30)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -160,6 +168,7 @@
       &>div
         &.first
           width: 220px
+          max-width: 220px
 
   .information
     &__block
@@ -266,7 +275,25 @@
           &.active
             display: none
 
-
+  .we-treat
+    &__block
+      .img-thumb
+        width: 140px !important
+    &__title
+      font-size: rem(24)
+      padding-left: 15px
+    &__menu
+      ul
+        li
+          a
+            padding-left: 15px
+            padding-right: 15px
+            white-space: normal
+            &::before
+              right: 15px
+            &::after
+              left: 15px
+              right: 15px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -418,6 +445,7 @@
       &>div
         &.first
           width: 130px
+          max-width: 130px
 
   .information
     h1, .h1
@@ -464,6 +492,50 @@
         text-align: center
         margin-left: auto
         margin-right: auto
+
+  .we-treat
+    &__body
+      &>.row
+        flex-direction: column
+    &__navigation
+      max-width: inherit
+      width: 100%
+      margin: 0 auto 25px
+    &__title
+      text-align: center
+      font-size: rem(34)
+    .owl-nav
+      display: none
+    &__text
+      padding-top: 0
+      padding-bottom: 20px
+    &__menu
+      &__header
+        display: block
+        div
+          padding-left: 15px
+          padding-right: 15px
+          &::before
+            right: 15px
+      ul
+        margin-top: 29px
+        li
+          height: 0
+          overflow: hidden
+          // transition: all 0.3s
+          a
+            transition: color 0.3s
+          &.active
+            // display: none
+            height: 29px
+            position: absolute
+            top: -29px
+            width: 100%
+
+      &.is-open
+        ul
+          li
+            height: 29px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -594,6 +666,7 @@
           padding-top: 20px
         &.first
           width: 100%
+          max-width: inherit
 
   .h1
     &--biggest
@@ -603,6 +676,9 @@
   .welcome
     &__info
       padding-top: 35px
+      padding-left: 0
+      padding-right: 0
+      margin-left: 0
       .h1, h1
         font-size: rem(24)
     .form
@@ -637,6 +713,14 @@
           margin-left: 19px
       .has-icon
         line-height: inherit
+
+  .we-treat
+    &__block
+      .img-thumb
+        max-width: 245px
+        margin: 0 auto 20px
+        width: auto !important
+        float: none
 
 @media only screen and (max-width : 366px)
   .header--all

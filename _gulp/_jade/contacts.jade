@@ -58,21 +58,21 @@ html(lang="ru")
               script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
               script.
                 function initialize() {
-                var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
-                var map_options = {
-                zoom: 16,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                center: myLatlng,
-                scrollwheel: false,
-                disableDefaultUI: true
-                }
-                var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
-                var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(63,73));
-                var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                icon: myIcon
-                });
+                  var myLatlng = new google.maps.LatLng(55.7510701,37.5822663);
+                  var map_options = {
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    center: myLatlng,
+                    scrollwheel: false,
+                    disableDefaultUI: false
+                  }
+                  var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                  var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(63,73));
+                  var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    icon: myIcon
+                  });
                 /* Remove if you dont want B/W Google Map */
                 /*
                 var styles = [

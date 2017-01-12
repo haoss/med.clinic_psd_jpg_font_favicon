@@ -158,6 +158,18 @@ $(document).ready(function(){
     loop: true
   });
 
+  $('.we-treat__carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    dots: true,
+    dotsContainer: '#we-treat-dots'
+  });
+  $('#we-treat-dots li').click(function () {
+    $('.we-treat__carousel').trigger('to.owl.carousel', [$(this).index(), 300]);
+  });
+
+
   // ol list marker
   $('ol.list li').each(function(){
     $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>')
@@ -218,31 +230,39 @@ $(document).ready(function(){
   });
 
   // Main map footer
-  function mainMapFooter(){
+  $(document).on('click', '.main-map__button', function(e){
     var width = $(window).width();
-    var mainMapButton = $('.main-map__button');
 
-    if (width > 767 && $('.footer__wrapper').is(':visible')) {
-      mainMapButton.on('click', function(e){
-        e.preventDefault();
-        $(this).toggleClass('is-active');
-        $('.footer').toggleClass('is-map-open');
-        $('.main-map').toggleClass('is-map-open');
+    if (width > 767) {
+      e.preventDefault();
+      $(this).toggleClass('is-active');
+      $('.footer').toggleClass('is-map-open');
+      $('.main-map').toggleClass('is-map-open');
 
-        if (!$(this).hasClass('is-active')) {
-          $(this).html('Развернуть карту<i class="ion-android-arrow-down"></i>')
-        } else {
-          $(this).html('Свернуть карту<i class="ion-android-arrow-up"></i>')
-        }
-      });
-    } else if (width <= 767 && $('.footer__wrapper').is(':hidden')) {
-      mainMapButton.on('click', function(){
-        window.location.href = $(this).data('href')
-      })
+      initialize();
+
+      if (!$(this).hasClass('is-active')) {
+        $(this).html('Развернуть карту<i class="ion-android-arrow-down"></i>')
+      } else {
+        $(this).html('Свернуть карту<i class="ion-android-arrow-up"></i>')
+      }
+    } else if (width <= 767) {
+      window.location.href = $(this).data('href')
     }
-  }
-  mainMapFooter();
-  $(window).resize(mainMapFooter);
+  });
+
+  // treat carousel navigation
+  $(document).on('click', '.we-treat__menu li', function(){
+    var width = $(window).width();
+
+    if (width <=767 && $(this).hasClass('active')) {
+      $(this).parents('.we-treat__menu').toggleClass('is-open');
+    }
+    if (width <=767 && !$(this).hasClass('active')) {
+      $(this).parents('.we-treat__menu').removeClass('is-open');
+    }
+
+  });
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');
