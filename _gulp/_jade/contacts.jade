@@ -55,8 +55,43 @@ html(lang="ru")
                     a(href="#!").btn.btn--blue написать нам
                     a(href="#!").btn.btn--red срочная помощь
 
-              .contacts__map
-                img(src="./tmp/contacts-map.jpg", alt="").img-responsive
+              script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+              script.
+                function initialize() {
+                var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
+                var map_options = {
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: myLatlng,
+                scrollwheel: false,
+                disableDefaultUI: true
+                }
+                var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(63,73));
+                var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                icon: myIcon
+                });
+                /* Remove if you dont want B/W Google Map */
+                /*
+                var styles = [
+                {
+                featureType: "all",
+                stylers: [
+                { saturation: -100 }
+                ]
+                }
+                ];
+                map.setOptions({styles: styles});
+                */
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+              // Google Map Ends!
+
+
+              .contacts__map#map_canvas
+                //- img(src="./tmp/contacts-map.jpg", alt="").img-responsive
                 //- img(src='https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=X9tzmTJh86zxoOjGONd9X7P0YDzESOUj&width=600&height=424&lang=ru_RU&sourceType=constructor', alt='')
 
 
