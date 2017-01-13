@@ -83,7 +83,7 @@ $(document).ready(function(){
     var li = $('.catalog__navigation .li--level1');
     li.find('> *').on('click', function(e){
       e.preventDefault();
-      li.removeClass('is-active');
+      // li.removeClass('is-active');
       $(this).parent().toggleClass('is-active');
     });
   }
@@ -141,7 +141,16 @@ $(document).ready(function(){
     nav: true,
     dots: false,
     autoWidth: true,
-    loop: true
+    loop: true,
+    responsive: {
+      0: {
+        items: 1,
+        autoWidth: false
+      },
+      321: {
+        autoWidth: true
+      }
+    }
   });
 
   $('.carousel').owlCarousel({
