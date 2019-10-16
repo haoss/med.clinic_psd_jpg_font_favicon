@@ -65,14 +65,6 @@ $(document).ready(function(){
     fixedContentPos: false
   });
 
-  // Chrome Smooth Scroll
-  try {
-    $.browserSelector();
-    if($("html").hasClass("chrome")) {
-        $.smoothScroll();
-    }
-  } catch(err) { };
-
   // Header navigation
   $('.header__menu__button').on('click', function(){
     $(this).parent().toggleClass('is-open');
